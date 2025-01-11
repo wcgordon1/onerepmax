@@ -1,4 +1,20 @@
-# Astro Starter Kit: Basics
+# Yoooo here's the code for One Rep Max Calculator
+
+### What is this??
+
+- I started this project using bolt.new (kept that at the bottom) and 'cleaned it up' in Cursor. I'm using Astro & React. I'm using TailwindCSS. I'm using TypeScript. I'm using i18next for translations. 
+
+- This is pretty much all AI code guided by me because why not? It's just a rad domain name and I used to be super into lifting. 315 bench at 18. Shoutout Bodybuilding.com forums circa 2002. 
+
+- Copy it. Steal it. Use it. I don't care. But I'd try to learn a little on your path. 
+
+- Have questions? Cool, don't ask me. ChatGPT your own life. Cheers. 
+
+## What I might do
+
+- I have free OpenAI credits. Look up microsoft for founders if you haven't (you are welcome). Build out 5000 AI programmatic translated blog posts on lifting and burn those credits. 
+
+## Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics
