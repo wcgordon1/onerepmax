@@ -43,15 +43,19 @@ const seoDescription = t(`seo.${page}.description`);
     <meta property="og:title" content={seoTitle} />
     <meta property="og:description" content={seoDescription} />
     <meta property="og:site_name" content="One Rep Max Calculator" />
+    <meta property="og:image" content={`${baseUrl}/ogimage.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={`${baseUrl}${currentPath}`} />
     <meta name="twitter:title" content={seoTitle} />
     <meta name="twitter:description" content={seoDescription} />
+    <meta name="twitter:image" content={`${baseUrl}/ogimage.png`} />
     
     <!-- Other Meta Tags -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/barbell.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
 
@@ -68,6 +72,16 @@ const seoDescription = t(`seo.${page}.description`);
       hreflang="x-default" 
       href={`${baseUrl}/en${currentPath}`} 
     />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QH6FR8X0CC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QH6FR8X0CC');
+    </script>
   </head>
   <body class="bg-dark text-white min-h-screen flex flex-col">
     <Header />

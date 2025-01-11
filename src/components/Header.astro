@@ -9,9 +9,14 @@ const currentLang = getLanguageFromURL(Astro.url.pathname) || 'en';
 <header class="bg-dark-lighter py-4">
   <nav class="container mx-auto px-4">
     <div class="flex justify-between items-center">
-      <a href={`/${currentLang}`} class="text-2xl font-bold text-white hover:text-primary transition-colors">
-        1RM Calculator
-      </a>
+      <div class="flex items-center space-x-2">
+        <img 
+          src="/barbell.png" 
+          alt="Barbell" 
+          class="w-6 h-6"
+        />
+        <a href={`/${currentLang}`} class="text-2xl font-bold">1RM Calculator</a>
+      </div>
 
       <!-- Mobile menu button -->
       <button

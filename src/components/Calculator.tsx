@@ -4,9 +4,10 @@ import { useTranslation } from 'react-i18next';
 
 interface CalculatorProps {
   exercise: 'deadlift' | 'bench' | 'squat';
+  isIndex?: boolean;
 }
 
-export const Calculator: React.FC<CalculatorProps> = ({ exercise }) => {
+export const Calculator = ({ exercise, isIndex = false }: CalculatorProps) => {
   const [weight, setWeight] = useState<number>(100);
   const [reps, setReps] = useState<number>(5);
   const [unit, setUnit] = useState<'kg' | 'lbs'>('kg');
@@ -39,7 +40,10 @@ export const Calculator: React.FC<CalculatorProps> = ({ exercise }) => {
   return (
     <div className="max-w-2xl mx-auto bg-dark-lighter p-6 rounded-lg shadow-xl">
       <h2 className="text-2xl font-bold mb-6 text-center capitalize">
-        {t('calculator.title', { exercise })}
+        {isIndex 
+          ? t('calculator.title', { exercise: '' }).replace('  ', ' ')
+          : t('calculator.title', { exercise: t(`exercises.${exercise}`) })
+        }
       </h2>
       
       <div className="space-y-6">
