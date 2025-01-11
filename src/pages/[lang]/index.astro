@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Calculator } from '../../components/Calculator';
+import { I18nextProvider } from '../../components/I18nextProvider';
+import { TranslatedText } from '../../components/TranslatedText';
+
+console.log('Requested language:', Astro.params.lang);
+console.log('Available paths:', getStaticPaths().map(p => p.params.lang));
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'ar' } },
+    { params: { lang: 'bn' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'ur' } },
+    { params: { lang: 'hi' } },
+    { params: { lang: 'ta' } }
+  ];
+}
+
+const { lang } = Astro.params;
+---
+
+<Layout title="One Rep Max Calculator" lang={lang} page="home">
+  <div class="max-w-4xl mx-auto text-center">
+    <I18nextProvider client:load>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <TranslatedText client:load i18nKey="site.tagline" /> <span class="text-primary"><TranslatedText client:load i18nKey="site.title" /></span>
+      </h1>
+      
+      <p class="text-xl text-gray-400 mb-12">
+        <TranslatedText client:load i18nKey="site.description" />
+      </p>
+
+      <blockquote class="bg-dark-lighter p-6 rounded-lg mb-12">
+        <p class="text-xl italic mb-2">
+          <TranslatedText client:load i18nKey="site.quote" />
+        </p>
+        <cite class="text-gray-400">- <TranslatedText client:load i18nKey="site.quoteAuthor" /></cite>
+      </blockquote>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <a href={`/${lang}/deadlift`} class="bg-dark-lighter p-6 rounded-lg hover:bg-dark-lighter/80 transition-colors">
+          <h2 class="text-2xl font-bold mb-2">
+            <TranslatedText client:load i18nKey="exercises.deadlift" />
+          </h2>
+          <p class="text-gray-400">
+            <TranslatedText client:load i18nKey="exercises.descriptions.deadlift" />
+          </p>
+        </a>
+        <a href={`/${lang}/bench`} class="bg-dark-lighter p-6 rounded-lg hover:bg-dark-lighter/80 transition-colors">
+          <h2 class="text-2xl font-bold mb-2">
+            <TranslatedText client:load i18nKey="exercises.bench" />
+          </h2>
+          <p class="text-gray-400">
+            <TranslatedText client:load i18nKey="exercises.descriptions.bench" />
+          </p>
+        </a>
+        <a href={`/${lang}/squat`} class="bg-dark-lighter p-6 rounded-lg hover:bg-dark-lighter/80 transition-colors">
+          <h2 class="text-2xl font-bold mb-2">
+            <TranslatedText client:load i18nKey="exercises.squat" />
+          </h2>
+          <p class="text-gray-400">
+            <TranslatedText client:load i18nKey="exercises.descriptions.squat" />
+          </p>
+        </a>
+      </div>
+
+      <Calculator client:load exercise="deadlift" />
+    </I18nextProvider>
+  </div>
+</Layout>

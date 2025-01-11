@@ -1,0 +1,8 @@
+---
+import { getLanguageFromURL } from '../utils';
+
+const lang = getLanguageFromURL(Astro.url.pathname) || 'en';
+
+// Redirect to the localized version
+return Astro.redirect(`/${lang}`);
+---

@@ -1,0 +1,77 @@
+{
+  "site": {
+    "title": "One Rep Max Calculator",
+    "tagline": "Calculate Your One Rep Max",
+    "description": "Use our advanced calculator to determine your maximum lifting potential across different exercises.",
+    "quote": "The only person you are destined to become is the person you decide to be.",
+    "quoteAuthor": "Ralph Waldo Emerson"
+  },
+  "exercises": {
+    "deadlift": "Deadlift",
+    "bench": "Bench Press",
+    "squat": "Squat",
+    "descriptions": {
+      "deadlift": "Calculate your deadlift one rep max",
+      "bench": "Calculate your bench press one rep max",
+      "squat": "Calculate your squat one rep max"
+    }
+  },
+  "calculator": {
+    "title": "{{exercise}} 1RM Calculator",
+    "weight": "Weight",
+    "reps": "Repetitions",
+    "results": "Results",
+    "calculate": "Calculate"
+  },
+  "units": {
+    "kg": "kg",
+    "lbs": "lbs"
+  },
+  "about": {
+    "title": "About One Rep Max Calculator",
+    "whatIs": {
+      "title": "What is One Rep Max (1RM)?",
+      "description": "One Rep Max (1RM) is the maximum amount of weight that can be lifted for a single repetition for a given exercise. It's a crucial metric for strength training and programming, helping athletes and fitness enthusiasts track their progress and set appropriate training loads."
+    },
+    "calculators": {
+      "title": "How Our Calculators Work",
+      "description": "We use five different scientifically-validated formulas to estimate your 1RM:",
+      "formulas": {
+        "epley": {
+          "name": "Epley Formula",
+          "description": "Most commonly used, provides reliable estimates across different rep ranges."
+        },
+        "brzycki": {
+          "name": "Brzycki Formula",
+          "description": "Particularly accurate for repetitions between 1-10."
+        },
+        "mcglothin": {
+          "name": "McGlothin Formula",
+          "description": "Offers a different approach that some find more accurate for their lifting style."
+        },
+        "lombardi": {
+          "name": "Lombardi Formula",
+          "description": "Uses an exponential calculation that some powerlifters prefer."
+        },
+        "oconner": {
+          "name": "O'Conner Formula",
+          "description": "A simpler calculation that still provides reliable estimates."
+        }
+      }
+    },
+    "safety": {
+      "title": "Safety Tips",
+      "tips": {
+        "warmup": "Always warm up properly before attempting heavy lifts",
+        "form": "Use proper form and technique",
+        "spotter": "Have a spotter when attempting near-maximal lifts",
+        "progress": "Progress gradually to prevent injury",
+        "listen": "Listen to your body and rest when needed"
+      }
+    },
+    "results": {
+      "title": "Using the Results",
+      "description": "The calculated 1RM is an estimate and should be used as a guide. When programming your training, use these numbers to calculate appropriate working weights for different rep ranges and intensities."
+    }
+  }
+}

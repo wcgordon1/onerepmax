@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { I18nextProvider } from '../../components/I18nextProvider';
+import { TranslatedText } from '../../components/TranslatedText';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'ar' } },
+    { params: { lang: 'bn' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'ur' } },
+    { params: { lang: 'hi' } },
+    { params: { lang: 'ta' } }
+  ];
+}
+
+const { lang } = Astro.params;
+---
+
+<Layout title="About" lang={lang}>
+  <div class="max-w-4xl mx-auto prose prose-invert">
+    <I18nextProvider client:load>
+      <h1><TranslatedText client:load i18nKey="about.title" /></h1>
+      
+      <h2><TranslatedText client:load i18nKey="about.whatIs.title" /></h2>
+      <p><TranslatedText client:load i18nKey="about.whatIs.description" /></p>
+
+      <h2><TranslatedText client:load i18nKey="about.calculators.title" /></h2>
+      <p><TranslatedText client:load i18nKey="about.calculators.description" /></p>
+      <ul>
+        {['epley', 'brzycki', 'mcglothin', 'lombardi', 'oconner'].map((formula) => (
+          <li>
+            <strong><TranslatedText client:load i18nKey={`about.calculators.formulas.${formula}.name`} />: </strong>
+            <TranslatedText client:load i18nKey={`about.calculators.formulas.${formula}.description`} />
+          </li>
+        ))}
+      </ul>
+
+      <h2><TranslatedText client:load i18nKey="about.safety.title" /></h2>
+      <ul>
+        {['warmup', 'form', 'spotter', 'progress', 'listen'].map((tip) => (
+          <li>
+            <TranslatedText client:load i18nKey={`about.safety.tips.${tip}`} />
+          </li>
+        ))}
+      </ul>
+
+      <h2><TranslatedText client:load i18nKey="about.results.title" /></h2>
+      <p><TranslatedText client:load i18nKey="about.results.description" /></p>
+    </I18nextProvider>
+  </div>
+</Layout>
