@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Plaka Yükleme Hesaplayıcı",
+    "description": "İstediğiniz toplam ağırlık için halterinize yüklemeniz gereken plakaları hesaplayın",
+    "inputs": {
+      "targetWeight": "Hedef Ağırlık",
+      "barWeight": "Bar Ağırlığı",
+      "include55": "55 lb plakaları dahil et"
+    },
+    "display": {
+      "barbellSetup": "Halter Düzeni",
+      "platesPerSide": "Her Taraf İçin Plakalar",
+      "totalWeight": "Toplam Ağırlık: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Hesapla"
+    },
+    "errors": {
+      "tooLight": "Ağırlık bardan daha ağır olmalı",
+      "impossibleWeight": "Mevcut plakalarla tam ağırlığa ulaşılamıyor",
+      "invalidInput": "Lütfen geçerli ağırlıklar girin",
+      "closestWeight": "En yakın mümkün ağırlık: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

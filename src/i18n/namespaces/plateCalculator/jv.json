@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Kalkulator Beban Plate",
+    "description": "Ngitung plate sing dibutuhake kanggo loading barbell kanthi total bobot sing dikarepake",
+    "inputs": {
+      "targetWeight": "Target Bobot",
+      "barWeight": "Bobot Bar",
+      "include55": "Kalebu plate 55 lb ing itungan"
+    },
+    "display": {
+      "barbellSetup": "Setup Barbell",
+      "platesPerSide": "Plate Saben Sisih",
+      "totalWeight": "Total Bobot: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Ngitung"
+    },
+    "errors": {
+      "tooLight": "Bobot kudu luwih abot tinimbang bar",
+      "impossibleWeight": "Ora bisa nggayuh bobot eksak nganggo plate sing ana",
+      "invalidInput": "Mangga lebokna bobot sing valid",
+      "closestWeight": "Bobot paling cedhak: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

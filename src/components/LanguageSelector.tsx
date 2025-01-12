@@ -7,6 +7,16 @@ const languages = [
   { code: 'zh', name: '🇨🇳 中文' },
   { code: 'es', name: '🇪🇸 Español' },
   { code: 'fr', name: '🇫🇷 Français' },
+  { code: 'de', name: '🇩🇪 Deutsch' },
+  { code: 'ja', name: '🇯🇵 日本語' },
+  { code: 'pa', name: '🇵🇰 ਪੰਜਾਬੀ' },
+  { code: 'jv', name: '🇮🇩 Basa Jawa' },
+  { code: 'ko', name: '🇰🇷 한국어' },
+  { code: 'vi', name: '🇻🇳 Tiếng Việt' },
+  { code: 'tr', name: '🇹🇷 Türkçe' },
+  { code: 'sw', name: '🇹🇿 Kiswahili' },
+  { code: 'it', name: '🇮🇹 Italiano' },
+  { code: 'fa', name: '🇮🇷 فارسی' },
   { code: 'ar', name: '🇸🇦 العربية' },
   { code: 'bn', name: '🇧🇩 বাংলা' },
   { code: 'pt', name: '🇧🇷 Português' },
@@ -24,7 +34,7 @@ export const LanguageSelector = () => {
 
   const handleLanguageChange = (code: string) => {
     const currentPath = window.location.pathname;
-    const pathWithoutLang = currentPath.replace(/^\/(en|zh|es|fr|ar|bn|pt|ru|ur|hi|ta)/, '');
+    const pathWithoutLang = currentPath.replace(/^\/(en|zh|es|fr|de|ja|pa|jv|ko|vi|tr|sw|it|fa|ar|bn|pt|ru|ur|hi|ta)/, '');
     const newPath = `/${code}${pathWithoutLang || '/'}`;
     window.location.href = newPath;
   };

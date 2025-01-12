@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Máy Tính Tải Tạ",
+    "description": "Tính toán số tạ cần thiết để đạt được tổng trọng lượng mong muốn trên thanh tạ",
+    "inputs": {
+      "targetWeight": "Trọng Lượng Mục Tiêu",
+      "barWeight": "Trọng Lượng Thanh Tạ",
+      "include55": "Bao gồm tạ 55 lb trong tính toán"
+    },
+    "display": {
+      "barbellSetup": "Thiết Lập Thanh Tạ",
+      "platesPerSide": "Tạ Mỗi Bên",
+      "totalWeight": "Tổng Trọng Lượng: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Tính Toán"
+    },
+    "errors": {
+      "tooLight": "Trọng lượng phải nặng hơn thanh tạ",
+      "impossibleWeight": "Không thể đạt được trọng lượng chính xác với số tạ hiện có",
+      "invalidInput": "Vui lòng nhập trọng lượng hợp lệ",
+      "closestWeight": "Trọng lượng gần nhất có thể: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

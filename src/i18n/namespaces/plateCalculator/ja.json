@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "プレート計算機",
+    "description": "バーベルに必要なプレートの重量を計算します",
+    "inputs": {
+      "targetWeight": "目標重量",
+      "barWeight": "バーの重量",
+      "include55": "55ポンドプレートを含める"
+    },
+    "display": {
+      "barbellSetup": "バーベル設定",
+      "platesPerSide": "各サイドのプレート",
+      "totalWeight": "総重量: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "計算"
+    },
+    "errors": {
+      "tooLight": "重量はバーより重くなければなりません",
+      "impossibleWeight": "利用可能なプレートで正確な重量を達成できません",
+      "invalidInput": "有効な重量を入力してください",
+      "closestWeight": "最も近い可能な重量: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

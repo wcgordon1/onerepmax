@@ -11,6 +11,16 @@ import plateCalculatorRU from './namespaces/plateCalculator/ru.json';
 import plateCalculatorUR from './namespaces/plateCalculator/ur.json';
 import plateCalculatorHI from './namespaces/plateCalculator/hi.json';
 import plateCalculatorTA from './namespaces/plateCalculator/ta.json';
+import plateCalculatorDE from './namespaces/plateCalculator/de.json';
+import plateCalculatorJA from './namespaces/plateCalculator/ja.json';
+import plateCalculatorPA from './namespaces/plateCalculator/pa.json';
+import plateCalculatorJV from './namespaces/plateCalculator/jv.json';
+import plateCalculatorKO from './namespaces/plateCalculator/ko.json';
+import plateCalculatorVI from './namespaces/plateCalculator/vi.json';
+import plateCalculatorTR from './namespaces/plateCalculator/tr.json';
+import plateCalculatorSW from './namespaces/plateCalculator/sw.json';
+import plateCalculatorIT from './namespaces/plateCalculator/it.json';
+import plateCalculatorFA from './namespaces/plateCalculator/fa.json';
 
 const resources = {
   en: {
@@ -235,11 +245,11 @@ const resources = {
         quoteAuthor: "ரால்ப் வால்டோ எமர்சன்"
       },
       exercises: {
-        deadlift: "டெட்லிஃப்ட்",
+        deadlift: "டெட்லிப்ட்",
         bench: "பெஞ்ச் பிரஸ்",
         squat: "ஸ்குவாட்",
         descriptions: {
-          deadlift: "உங்கள் டெட்லிஃப்ட் ஒன் ரெப் மேக்ஸை கணக்கிடுங்கள்",
+          deadlift: "உங்கள் டெட்லிப்ட் ஒன் ரெப் மேக்ஸை கணக்கிடுங்கள்",
           bench: "உங்கள் பெஞ்ச் பிரஸ் ஒன் ரெப் மேக்ஸை கணக்கிடுங்கள்",
           squat: "உங்கள் ஸ்குவாட் ஒன் ரெப் மேக்ஸை கணக்கிடுங்கள்"
         }
@@ -563,14 +573,523 @@ const resources = {
       }
     },
     plateCalculator: plateCalculatorUR.plateCalculator
+  },
+  de: {
+    translation: {
+      site: {
+        title: "One Rep Max Rechner",
+        tagline: "Berechne dein One Rep Maximum",
+        description: "Nutze unseren fortgeschrittenen Rechner, um dein maximales Hebepotential bei verschiedenen Übungen zu bestimmen.",
+        quote: "Die einzige Person, zu der du bestimmt bist zu werden, ist die Person, die du entscheidest zu sein.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Kreuzheben",
+        bench: "Bankdrücken",
+        squat: "Kniebeuge",
+        descriptions: {
+          deadlift: "Berechne dein Kreuzheben One Rep Max",
+          bench: "Berechne dein Bankdrücken One Rep Max",
+          squat: "Berechne dein Kniebeuge One Rep Max"
+        }
+      },
+      calculator: {
+        title: "{{exercise}} 1RM Rechner",
+        weight: "Gewicht",
+        reps: "Wiederholungen",
+        results: "Ergebnisse",
+        calculate: "Berechnen"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lb"
+      },
+      seo: {
+        home: {
+          title: "One Rep Max Rechner | Berechne dein maximales Hebepotential",
+          description: "Kostenloser One Rep Max Rechner für Kreuzheben, Bankdrücken und Kniebeuge. Erhalte genaue Schätzungen mit mehreren bewährten Formeln."
+        },
+        deadlift: {
+          title: "Kreuzheben 1RM Rechner | Berechne dein maximales Kreuzheben",
+          description: "Berechne dein Kreuzheben One Rep Max mit bewährten Formeln. Erhalte genaue Schätzungen deines maximalen Kreuzheben-Potentials."
+        },
+        bench: {
+          title: "Bankdrücken 1RM Rechner | Berechne dein maximales Bankdrücken",
+          description: "Berechne dein Bankdrücken One Rep Max mit bewährten Formeln. Erhalte genaue Schätzungen deines maximalen Bankdrück-Potentials."
+        },
+        squat: {
+          title: "Kniebeuge 1RM Rechner | Berechne deine maximale Kniebeuge",
+          description: "Berechne dein Kniebeuge One Rep Max mit bewährten Formeln. Erhalte genaue Schätzungen deines maximalen Kniebeuge-Potentials."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorDE.plateCalculator
+  },
+  ja: {
+    translation: {
+      site: {
+        title: "1RMカウンター",
+        tagline: "1RMを計算する",
+        description: "異なるトレーニングでの最大重量挙上力を判断するために、高度な計算機を使用します。",
+        quote: "あなたがなるべき人は、あなたがなろうと決めた人です。",
+        quoteAuthor: "ラルフ・ワルド・エマーソン"
+      },
+      exercises: {
+        deadlift: "デッドリフト",
+        bench: "ベンチプレス",
+        squat: "スクワット",
+        descriptions: {
+          deadlift: "デッドリフトの1RMを計算する",
+          bench: "ベンチプレスの1RMを計算する",
+          squat: "スクワットの1RMを計算する"
+        }
+      },
+      calculator: {
+        title: "{{exercise}} 1RM計算機",
+        weight: "重量",
+        reps: "回数",
+        results: "結果",
+        calculate: "計算"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lb"
+      },
+      seo: {
+        home: {
+          title: "1RM計算機 | 最大挙上重量を計算する",
+          description: "デッドリフト、ベンチプレス、スクワットのための無料1RM計算機。複数の実証済みの計算式を使用して正確な推定値を取得します。"
+        },
+        deadlift: {
+          title: "デッドリフト1RM計算機 | 最大デッドリフトを計算する",
+          description: "実証済みの計算式を使用してデッドリフトの1RMを計算します。最大潜在能力の正確な推定値を取得します。"
+        },
+        bench: {
+          title: "ベンチプレス1RM計算機 | 最大ベンチプレスを計算する",
+          description: "実証済みの計算式を使用してベンチプレスの1RMを計算します。最大潜在能力の正確な推定値を取得します。"
+        },
+        squat: {
+          title: "スクワット1RM計算機 | 最大スクワットを計算する",
+          description: "実証済みの計算式を使用してスクワットの1RMを計算します。最大潜在能力の正確な推定値を取得します。"
+        }
+      }
+    },
+    plateCalculator: plateCalculatorJA.plateCalculator
+  },
+  pa: {
+    translation: {
+      site: {
+        title: "ਪੱਤਰ ਮਾਕਸ ਕੈਲਕੁਲੇਟਰ",
+        tagline: "ਤੁਹਾਰ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ",
+        description: "ਵਿਵਿਨ ਵਿਯਾਮਾਂ ਵਿਚ ਤੁਹਾਰ ਸਰਬਾਂ ਵਾਂ ਤੋਲਾ ਕਰਨ ਲਈ ਮਾਮ ਦੇਰ ਉੰਨਤ ਕੈਲਕੁਲੇਟਰ ਵਪਣ ਕਰੋ।",
+        quote: "ਤੁਹਾਰ ਨਿਯਤਿ ਜੋ ਤੁਹਾਰ ਨਿਯਤਿ ਹੋਵਾ ਜੋ ਤੁਹਾਰ ਨਿਯਤਿ ਲਈ ਤੁਹਾਰ ਨਿਯਤਿ ਲੈ ਤਾਂ ਤੁਹਾਰ ਨਿਯਤਿ ਹੋਵਾ।",
+        quoteAuthor: "ਰਾਲਫ ਵਾਲਡੋ ਏਮਰਸਨ"
+      },
+      exercises: {
+        deadlift: "ਡੈਡਲਿਫਟ",
+        bench: "ਬੈਨਚ ਪ੍ਰੈਸ",
+        squat: "ਸਕਵਾਟ",
+        descriptions: {
+          deadlift: "ਤੁਹਾਰ ਡੈਡਲਿਫਟ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ",
+          bench: "ਤੁਹਾਰ ਬੈਨਚ ਪ੍ਰੈਸ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ",
+          squat: "ਤੁਹਾਰ ਸਕਵਾਟ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ"
+        }
+      },
+      calculator: {
+        title: "{{exercise}} 1RM ਕੈਲਕੁਲੇਟਰ",
+        weight: "ਵਾਂ",
+        reps: "ਪੁਨਰਾਬ੃ਤਿ",
+        results: "ਫਲਾਫਲ",
+        calculate: "ਗਣਨਾ ਕਰੋ"
+      },
+      units: {
+        kg: "ਕੈਲੋ",
+        lbs: "ਪਾੌਂਡ"
+      },
+      seo: {
+        home: {
+          title: "ਪੱਤਰ ਮਾਕਸ ਕੈਲਕੁਲੇਟਰ | ਤੁਹਾਰ ਸਰਬਾਂ ਵਾਂ ਕਰੋ",
+          description: "ਡੈਡਲਿਫਟ, ਬੈਨਚ ਪ੍ਰੈਸ ਅਤੇ ਸਕਵਾਟ ਲਈ ਬਿਨਾਮੂਲ੍ਯੇ ਪੱਤਰ ਮਾਕਸ ਕੈਲਕੁਲੇਟਰ। ਪ੍ਰਮਾਣਿਤ ਸੂਤਰ ਵਪਣ ਕਰੋ।"
+        },
+        deadlift: {
+          title: "ਡੈਡਲਿਫਟ 1RM ਕੈਲਕੁਲੇਟਰ | ਤੁਹਾਰ ਸਰਬਾਂ ਡੈਡਲਿਫਟ ਗਣਨਾ ਕਰੋ",
+          description: "ਪ੍ਰਮਾਣਿਤ ਸੂਤਰ ਵਪਣ ਕਰੋ ਤੁਹਾਰ ਡੈਡਲਿਫਟ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ। ਤੁਹਾਰ ਸਰਬਾਂ ਕਰਨ ਕਰੋ।"
+        },
+        bench: {
+          title: "ਬੈਨਚ ਪ੍ਰੈਸ 1RM ਕੈਲਕੁਲੇਟਰ | ਤੁਹਾਰ ਸਰਬਾਂ ਬੈਨਚ ਪ੍ਰੈਸ ਕਰੋ",
+          description: "ਪ੍ਰਮਾਣਿਤ ਸੂਤਰ ਵਪਣ ਕਰੋ ਤੁਹਾਰ ਬੈਨਚ ਪ੍ਰੈਸ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ। ਤੁਹਾਰ ਸਰਬਾਂ ਕਰਨ ਕਰੋ।"
+        },
+        squat: {
+          title: "ਸਕਵਾਟ 1RM ਕੈਲਕੁਲੇਟਰ | ਤੁਹਾਰ ਸਰਬਾਂ ਸਕਵਾਟ ਕਰੋ",
+          description: "ਪ੍ਰਮਾਣਿਤ ਸੂਤਰ ਵਪਣ ਕਰੋ ਤੁਹਾਰ ਸਕਵਾਟ ਪੱਤਰ ਮਾਕਸ ਗਣਨਾ ਕਰੋ। ਤੁਹਾਰ ਸਰਬਾਂ ਕਰਨ ਕਰੋ।"
+        }
+      }
+    },
+    plateCalculator: plateCalculatorPA.plateCalculator
+  },
+  jv: {
+    translation: {
+      site: {
+        title: "Kalkulator 1RM",
+        tagline: "Hitung 1RM Anda",
+        description: "Gunakan kalkulator lanjutan kami untuk menentukan potensi maksimum otot Anda dalam latihan yang berbeda.",
+        quote: "Orang yang Anda dikaitkan untuk menjadi adalah orang yang Anda inginkan untuk menjadi.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Deadlift",
+        bench: "Bench Press",
+        squat: "Squat",
+        descriptions: {
+          deadlift: "Hitung 1RM Deadlift Anda",
+          bench: "Hitung 1RM Bench Press Anda",
+          squat: "Hitung 1RM Squat Anda"
+        }
+      },
+      calculator: {
+        title: "Kalkulator 1RM {{exercise}}",
+        weight: "Berat",
+        reps: "Pengulangan",
+        results: "Hasil",
+        calculate: "Hitung"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lbs"
+      },
+      seo: {
+        home: {
+          title: "Kalkulator 1RM | Hitung Potensi Maksimum Anda",
+          description: "Kalkulator 1RM gratis untuk deadlift, bench press, dan squat. Dapatkan perkiraan yang akurat menggunakan beberapa rumus yang terbukti."
+        },
+        deadlift: {
+          title: "Kalkulator 1RM Deadlift | Hitung Maksimum Deadlift Anda",
+          description: "Hitung 1RM Deadlift Anda menggunakan rumus yang terbukti. Dapatkan perkiraan yang akurat dari potensi maksimum Anda."
+        },
+        bench: {
+          title: "Kalkulator 1RM Bench Press | Hitung Maksimum Bench Press Anda",
+          description: "Hitung 1RM Bench Press Anda menggunakan rumus yang terbukti. Dapatkan perkiraan yang akurat dari potensi maksimum Anda."
+        },
+        squat: {
+          title: "Kalkulator 1RM Squat | Hitung Maksimum Squat Anda",
+          description: "Hitung 1RM Squat Anda menggunakan rumus yang terbukti. Dapatkan perkiraan yang akurat dari potensi maksimum Anda."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorJV.plateCalculator
+  },
+  ko: {
+    translation: {
+      site: {
+        title: "1RM 계산기",
+        tagline: "1RM 계산하기",
+        description: "다른 운동에서 최대 중량을 결정하기 위해 고급 계산기를 사용하세요.",
+        quote: "너가 되어야 할 사람은 너가 되기로 결정한 사람입니다.",
+        quoteAuthor: "랄프 왈도 에머슨"
+      },
+      exercises: {
+        deadlift: "데드리프트",
+        bench: "벤치 프레스",
+        squat: "스쿼트",
+        descriptions: {
+          deadlift: "데드리프트 1RM 계산하기",
+          bench: "벤치 프레스 1RM 계산하기",
+          squat: "스쿼트 1RM 계산하기"
+        }
+      },
+      calculator: {
+        title: "{{exercise}} 1RM 계산기",
+        weight: "무게",
+        reps: "반복",
+        results: "결과",
+        calculate: "계산하기"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lbs"
+      },
+      seo: {
+        home: {
+          title: "1RM 계산기 | 최대 중량 계산하기",
+          description: "데드리프트, 벤치 프레스, 스쿼트를 위한 무료 1RM 계산기. 확인된 공식을 사용하여 정확한 추정치를 얻으세요."
+        },
+        deadlift: {
+          title: "데드리프트 1RM 계산기 | 최대 데드리프트 계산하기",
+          description: "확인된 공식을 사용하여 데드리프트 1RM을 계산하세요. 최대 중량의 정확한 추정치를 얻으세요."
+        },
+        bench: {
+          title: "벤치 프레스 1RM 계산기 | 최대 벤치 프레스 계산하기",
+          description: "확인된 공식을 사용하여 벤치 프레스 1RM을 계산하세요. 최대 중량의 정확한 추정치를 얻으세요."
+        },
+        squat: {
+          title: "스쿼트 1RM 계산기 | 최대 스쿼트 계산하기",
+          description: "확인된 공식을 사용하여 스쿼트 1RM을 계산하세요. 최대 중량의 정확한 추정치를 얻으세요."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorKO.plateCalculator
+  },
+  vi: {
+    translation: {
+      site: {
+        title: "Bàn Tập 1RM",
+        tagline: "Tính 1RM Của Bạn",
+        description: "Sử dụng máy tính nâng cao của chúng tôi để xác định sức mạnh tối đa của bạn trong các bài tập khác nhau.",
+        quote: "Người mà bạn được kết nối để trở thành là người mà bạn quyết định trở thành.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Deadlift",
+        bench: "Bench Press",
+        squat: "Squat",
+        descriptions: {
+          deadlift: "Tính 1RM Deadlift Của Bạn",
+          bench: "Tính 1RM Bench Press Của Bạn",
+          squat: "Tính 1RM Squat Của Bạn"
+        }
+      },
+      calculator: {
+        title: "Bàn Tập 1RM {{exercise}}",
+        weight: "Cân Nặng",
+        reps: "Lặp Lại",
+        results: "Kết Quả",
+        calculate: "Tính"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lbs"
+      },
+      seo: {
+        home: {
+          title: "Bàn Tập 1RM | Tính Sức Mạnh Tối Đa Của Bạn",
+          description: "Bàn Tập 1RM miễn phí cho deadlift, bench press, và squat. Nhận được ước tính chính xác bằng cách sử dụng nhiều công thức đã được chứng minh."
+        },
+        deadlift: {
+          title: "Bàn Tập 1RM Deadlift | Tính Mức Tối Đa Deadlift Của Bạn",
+          description: "Tính 1RM Deadlift Của Bạn bằng cách sử dụng công thức đã được chứng minh. Nhận được ước tính chính xác của sức mạnh tối đa."
+        },
+        bench: {
+          title: "Bàn Tập 1RM Bench Press | Tính Mức Tối Đa Bench Press Của Bạn",
+          description: "Tính 1RM Bench Press Của Bạn bằng cách sử dụng công thức đã được chứng minh. Nhận được ước tính chính xác của sức mạnh tối đa."
+        },
+        squat: {
+          title: "Bàn Tập 1RM Squat | Tính Mức Tối Đa Squat Của Bạn",
+          description: "Tính 1RM Squat Của Bạn bằng cách sử dụng công thức đã được chứng minh. Nhận được ước tính chính xác của sức mạnh tối đa."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorVI.plateCalculator
+  },
+  tr: {
+    translation: {
+      site: {
+        title: "1RM Hesaplama",
+        tagline: "1RM Hesaplamak",
+        description: "Farklı egzersizlerde maksimum ağırlık kaldırma kapasitesini belirlemek için gelişmiş hesap makinesini kullanın.",
+        quote: "Senin olmanı gereken kişi, senin olmağını istediğin kişi.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Deadlift",
+        bench: "Bench Press",
+        squat: "Squat",
+        descriptions: {
+          deadlift: "1RM Deadlift Hesaplamak",
+          bench: "1RM Bench Press Hesaplamak",
+          squat: "1RM Squat Hesaplamak"
+        }
+      },
+      calculator: {
+        title: "{{exercise}} 1RM Hesaplama",
+        weight: "Ağırlık",
+        reps: "Tekrar",
+        results: "Sonuç",
+        calculate: "Hesapla"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lbs"
+      },
+      seo: {
+        home: {
+          title: "1RM Hesaplama | Maksimum Ağırlık Hesaplamak",
+          description: "Deadlift, bench press ve squat için ücretsiz 1RM hesap makinesi. Doğrulanmış formüller kullanarak doğru tahminler elde edin."
+        },
+        deadlift: {
+          title: "1RM Deadlift Hesaplama | Maksimum Deadlift Hesaplamak",
+          description: "Doğrulanmış formüller kullanarak 1RM Deadlift Hesaplamak. Maksimum ağırlık için doğru tahminler elde edin."
+        },
+        bench: {
+          title: "1RM Bench Press Hesaplama | Maksimum Bench Press Hesaplamak",
+          description: "Doğrulanmış formüller kullanarak 1RM Bench Press Hesaplamak. Maksimum ağırlık için doğru tahminler elde edin."
+        },
+        squat: {
+          title: "1RM Squat Hesaplama | Maksimum Squat Hesaplamak",
+          description: "Doğrulanmış formüller kullanarak 1RM Squat Hesaplamak. Maksimum ağırlık için doğru tahminler elde edin."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorTR.plateCalculator
+  },
+  sw: {
+    translation: {
+      site: {
+        title: "Kalkulator 1RM",
+        tagline: "Kutoa 1RM Yako",
+        description: "Tumia kalkulator yenyejuzi kwa kupata potensiali maksima kwa kila mazingira.",
+        quote: "Mtu ambao unapaswa kuwa ni mtu ambao unapaswa kuwa.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Deadlift",
+        bench: "Bench Press",
+        squat: "Squat",
+        descriptions: {
+          deadlift: "Kutoa 1RM Deadlift Yako",
+          bench: "Kutoa 1RM Bench Press Yako",
+          squat: "Kutoa 1RM Squat Yako"
+        }
+      },
+      calculator: {
+        title: "Kalkulator 1RM {{exercise}}",
+        weight: "Kipaji",
+        reps: "Kuzidisha",
+        results: "Matokeo",
+        calculate: "Kutoa"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lbs"
+      },
+      seo: {
+        home: {
+          title: "Kalkulator 1RM | Kutoa 1RM Yako",
+          description: "Kalkulator 1RM ya kwa deadlift, bench press na squat. Kutoa matokeo zimeongezeka kutumia mifumo mengi ya formulas zimeongezeka."
+        },
+        deadlift: {
+          title: "Kalkulator 1RM Deadlift | Kutoa 1RM Deadlift Yako",
+          description: "Kutoa 1RM Deadlift Yako kwa kutumia formulas zimeongezeka. Kutoa matokeo zimeongezeka kwa potensiali maksima."
+        },
+        bench: {
+          title: "Kalkulator 1RM Bench Press | Kutoa 1RM Bench Press Yako",
+          description: "Kutoa 1RM Bench Press Yako kwa kutumia formulas zimeongezeka. Kutoa matokeo zimeongezeka kwa potensiali maksima."
+        },
+        squat: {
+          title: "Kalkulator 1RM Squat | Kutoa 1RM Squat Yako",
+          description: "Kutoa 1RM Squat Yako kwa kutumia formulas zimeongezeka. Kutoa matokeo zimeongezeka kwa potensiali maksima."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorSW.plateCalculator
+  },
+  it: {
+    translation: {
+      site: {
+        title: "Calcolatore 1RM",
+        tagline: "Calcola il tuo 1RM",
+        description: "Utilizza il nostro calcolatore avanzato per determinare la tua potenziale massima di sollevamento in diversi esercizi.",
+        quote: "La persona a cui sei destinato a diventare è la persona che decidi di essere.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Deadlift",
+        bench: "Bench Press",
+        squat: "Squat",
+        descriptions: {
+          deadlift: "Calcola il tuo 1RM Deadlift",
+          bench: "Calcola il tuo 1RM Bench Press",
+          squat: "Calcola il tuo 1RM Squat"
+        }
+      },
+      calculator: {
+        title: "Calcolatore 1RM {{exercise}}",
+        weight: "Peso",
+        reps: "Ripetizioni",
+        results: "Risultati",
+        calculate: "Calcolare"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lbs"
+      },
+      seo: {
+        home: {
+          title: "Calcolatore 1RM | Calcola il tuo Potenziale Massimo",
+          description: "Calcolatore gratuito di 1RM per deadlift, bench press e squat. Ottieni stime accurate utilizzando molte formule provate."
+        },
+        deadlift: {
+          title: "Calcolatore 1RM Deadlift | Calcola il tuo Massimo",
+          description: "Calcola il tuo 1RM Deadlift utilizzando formule provate. Ottieni stime accurate del tuo potenziale massimo."
+        },
+        bench: {
+          title: "Calcolatore 1RM Bench Press | Calcola il tuo Massimo",
+          description: "Calcola il tuo 1RM Bench Press utilizzando formule provate. Ottieni stime accurate del tuo potenziale massimo."
+        },
+        squat: {
+          title: "Calcolatore 1RM Squat | Calcola il tuo Massimo",
+          description: "Calcola il tuo 1RM Squat utilizzando formule provate. Ottieni stime accurate del tuo potenziale massimo."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorIT.plateCalculator
+  },
+  fa: {
+    translation: {
+      site: {
+        title: "ماشین حساب 1RM",
+        tagline: "1RM محاسبه کنید",
+        description: "برای تعیین ظرفیت بیشینه بارگیری در تمرین‌های مختلف از ماشین حساب پیشرفته استفاده کنید.",
+        quote: "شخصی که باید باشید، شخصی است که تصمیم می‌دهید باشید.",
+        quoteAuthor: "رالف والدو إیمرسون"
+      },
+      exercises: {
+        deadlift: "Deadlift",
+        bench: "Bench Press",
+        squat: "Squat",
+        descriptions: {
+          deadlift: "1RM Deadlift محاسبه کنید",
+          bench: "1RM Bench Press محاسبه کنید",
+          squat: "1RM Squat محاسبه کنید"
+        }
+      },
+      calculator: {
+        title: "ماشین حساب 1RM {{exercise}}",
+        weight: "وزن",
+        reps: "تکرار",
+        results: "نتیجه",
+        calculate: "محاسبه کنید"
+      },
+      units: {
+        kg: "کیلوگرم",
+        lbs: "پوند"
+      },
+      seo: {
+        home: {
+          title: "ماشین حساب 1RM | ظرفیت بیشینه بارگیری محاسبه کنید",
+          description: "ماشین حساب 1RM برای deadlift، bench press و squat ارائه می‌دهد. ظرفیت بیشینه بارگیری با استفاده از چند فرمول اثبات شده را بدست آورید."
+        },
+        deadlift: {
+          title: "ماشین حساب 1RM Deadlift | ظرفیت بیشینه Deadlift محاسبه کنید",
+          description: "1RM Deadlift با استفاده از فرمول‌های اثبات شده محاسبه کنید. ظرفیت بیشینه بارگیری بدست آورید."
+        },
+        bench: {
+          title: "ماشین حساب 1RM Bench Press | ظرفیت بیشینه Bench Press محاسبه کنید",
+          description: "1RM Bench Press با استفاده از فرمول‌های اثبات شده محاسبه کنید. ظرفیت بیشینه بارگیری بدست آورید."
+        },
+        squat: {
+          title: "ماشین حساب 1RM Squat | ظرفیت بیشینه Squat محاسبه کنید",
+          description: "1RM Squat با استفاده از فرمول‌های اثبات شده محاسبه کنید. ظرفیت بیشینه بارگیری بدست آورید."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorFA.plateCalculator
   }
 };
 
 // Get initial language from URL if we're in the browser
 const getInitialLanguage = () => {
   if (typeof window !== 'undefined') {
-    const match = window.location.pathname.match(/^\/(en|zh|es|fr|ar|bn|pt|ru|ur|hi|ta)/);
-    console.log('URL:', window.location.pathname, 'Match:', match);
+    const match = window.location.pathname.match(/^\/(en|zh|es|fr|de|ja|pa|jv|ko|vi|tr|sw|it|fa|ar|bn|pt|ru|ur|hi|ta)/);
     return match ? match[1] : 'en';
   }
   return 'en';
@@ -587,15 +1106,6 @@ i18next
     },
     ns: ['translation', 'plateCalculator'],
     defaultNS: 'translation'
-  }).then(() => {
-    console.log('i18next initialized with:', {
-      currentLang: i18next.language,
-      availableLangs: i18next.languages,
-      loadedResources: i18next.options.resources ? Object.keys(i18next.options.resources) : []
-    });
   });
-
-console.log('Available languages:', Object.keys(resources));
-console.log('Current language:', i18next.language);
 
 export default i18next;

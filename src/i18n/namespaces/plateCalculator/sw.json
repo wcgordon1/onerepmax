@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Kikokotoo cha Kupakia Sahani",
+    "description": "Kokotoa sahani unazohitaji kupakia kwenye mwamba wako kwa uzito unaotaka",
+    "inputs": {
+      "targetWeight": "Uzito Lengwa",
+      "barWeight": "Uzito wa Mwamba",
+      "include55": "Jumuisha sahani za paundi 55"
+    },
+    "display": {
+      "barbellSetup": "Mpangilio wa Mwamba",
+      "platesPerSide": "Sahani kwa Upande",
+      "totalWeight": "Jumla ya Uzito: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Kokotoa"
+    },
+    "errors": {
+      "tooLight": "Uzito lazima uwe mzito kuliko mwamba",
+      "impossibleWeight": "Haiwezekani kupata uzito kamili na sahani zilizopo",
+      "invalidInput": "Tafadhali ingiza uzito halali",
+      "closestWeight": "Uzito wa karibu zaidi: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

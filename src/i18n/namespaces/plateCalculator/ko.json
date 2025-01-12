@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "플레이트 로딩 계산기",
+    "description": "원하는 총 중량을 위해 바벨에 필요한 플레이트를 계산하세요",
+    "inputs": {
+      "targetWeight": "목표 중량",
+      "barWeight": "바 중량",
+      "include55": "55파운드 플레이트 포함"
+    },
+    "display": {
+      "barbellSetup": "바벨 설정",
+      "platesPerSide": "각 측면 플레이트",
+      "totalWeight": "총 중량: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "계산"
+    },
+    "errors": {
+      "tooLight": "중량은 바보다 무거워야 합니다",
+      "impossibleWeight": "사용 가능한 플레이트로 정확한 중량을 만들 수 없습니다",
+      "invalidInput": "유효한 중량을 입력해주세요",
+      "closestWeight": "가장 가까운 가능 중량: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "محاسبه‌گر وزنه‌گذاری",
+    "description": "وزنه‌های مورد نیاز برای رسیدن به وزن کل مورد نظر را محاسبه کنید",
+    "inputs": {
+      "targetWeight": "وزن هدف",
+      "barWeight": "وزن میله",
+      "include55": "شامل وزنه‌های ۵۵ پوندی"
+    },
+    "display": {
+      "barbellSetup": "چیدمان هالتر",
+      "platesPerSide": "وزنه‌ها در هر طرف",
+      "totalWeight": "وزن کل: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "محاسبه"
+    },
+    "errors": {
+      "tooLight": "وزن باید از میله سنگین‌تر باشد",
+      "impossibleWeight": "رسیدن به وزن دقیق با وزنه‌های موجود ممکن نیست",
+      "invalidInput": "لطفاً وزن معتبر وارد کنید",
+      "closestWeight": "نزدیک‌ترین وزن ممکن: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "کیلوگرم",
+      "lbs": "پوند"
+    }
+  }
+} 

@@ -3,12 +3,22 @@ import Layout from '../../layouts/Layout.astro';
 import { PlateCalculator } from '../../components/PlateCalculator';
 import { I18nextProvider } from '../../components/I18nextProvider';
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   return [
     { params: { lang: 'en' } },
     { params: { lang: 'zh' } },
     { params: { lang: 'es' } },
     { params: { lang: 'fr' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'pa' } },
+    { params: { lang: 'jv' } },
+    { params: { lang: 'ko' } },
+    { params: { lang: 'vi' } },
+    { params: { lang: 'tr' } },
+    { params: { lang: 'sw' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'fa' } },
     { params: { lang: 'ar' } },
     { params: { lang: 'bn' } },
     { params: { lang: 'pt' } },

@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Calcolatore Carico Dischi",
+    "description": "Calcola i dischi necessari da caricare sul bilanciere per il peso totale desiderato",
+    "inputs": {
+      "targetWeight": "Peso Obiettivo",
+      "barWeight": "Peso del Bilanciere",
+      "include55": "Includi dischi da 55 lb nel calcolo"
+    },
+    "display": {
+      "barbellSetup": "Configurazione Bilanciere",
+      "platesPerSide": "Dischi per Lato",
+      "totalWeight": "Peso Totale: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Calcola"
+    },
+    "errors": {
+      "tooLight": "Il peso deve essere maggiore del bilanciere",
+      "impossibleWeight": "Impossibile raggiungere il peso esatto con i dischi disponibili",
+      "invalidInput": "Inserire pesi validi",
+      "closestWeight": "Peso più vicino possibile: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

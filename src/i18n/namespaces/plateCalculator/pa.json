@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "ਪਲੇਟ ਲੋਡਿੰਗ ਕੈਲਕੁਲੇਟਰ",
+    "description": "ਆਪਣੀ ਇੱਛਤ ਕੁੱਲ ਭਾਰ ਲਈ ਬਾਰਬੇਲ 'ਤੇ ਲੋਡ ਕਰਨ ਲਈ ਪਲੇਟਾਂ ਦੀ ਗਣਨਾ ਕਰੋ",
+    "inputs": {
+      "targetWeight": "ਟੀਚਾ ਭਾਰ",
+      "barWeight": "ਬਾਰ ਦਾ ਭਾਰ",
+      "include55": "55 ਪੌਂਡ ਪਲੇਟਾਂ ਸ਼ਾਮਲ ਕਰੋ"
+    },
+    "display": {
+      "barbellSetup": "ਬਾਰਬੇਲ ਸੈੱਟਅੱਪ",
+      "platesPerSide": "ਪ੍ਰਤੀ ਪਾਸੇ ਪਲੇਟਾਂ",
+      "totalWeight": "ਕੁੱਲ ਭਾਰ: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "ਗਣਨਾ ਕਰੋ"
+    },
+    "errors": {
+      "tooLight": "ਭਾਰ ਬਾਰ ਤੋਂ ਵੱਧ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+      "impossibleWeight": "ਉਪਲਬਧ ਪਲੇਟਾਂ ਨਾਲ ਸਹੀ ਭਾਰ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
+      "invalidInput": "ਕਿਰਪਾ ਕਰਕੇ ਵੈਧ ਭਾਰ ਦਰਜ ਕਰੋ",
+      "closestWeight": "ਨਜ਼ਦੀਕੀ ਸੰਭਵ ਭਾਰ: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "ਕਿਲੋ",
+      "lbs": "ਪੌਂਡ"
+    }
+  }
+} 

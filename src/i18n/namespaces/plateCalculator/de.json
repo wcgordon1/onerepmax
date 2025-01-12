@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Scheibenrechner",
+    "description": "Berechnen Sie die benötigten Gewichtsscheiben für Ihre gewünschte Gesamtlast auf der Hantelstange",
+    "inputs": {
+      "targetWeight": "Zielgewicht",
+      "barWeight": "Stangengewicht",
+      "include55": "55 lb Scheiben einbeziehen"
+    },
+    "display": {
+      "barbellSetup": "Hantelaufbau",
+      "platesPerSide": "Scheiben pro Seite",
+      "totalWeight": "Gesamtgewicht: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Berechnen"
+    },
+    "errors": {
+      "tooLight": "Das Gewicht muss schwerer als die Stange sein",
+      "impossibleWeight": "Exaktes Gewicht mit verfügbaren Scheiben nicht möglich",
+      "invalidInput": "Bitte gültige Gewichte eingeben",
+      "closestWeight": "Nächstmögliches Gewicht: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 
