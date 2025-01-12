@@ -14,7 +14,7 @@ export default defineConfig({
       'ko', 'vi', 'tr', 'sw', 
       'it', 'fa', 'ar', 'bn', 
       'pt', 'ru', 'ur', 'hi', 
-      'ta'
+      'ta', 'pl'
     ],
     routing: {
       prefixDefaultLocale: true

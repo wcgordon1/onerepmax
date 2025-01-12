@@ -21,6 +21,7 @@ import plateCalculatorTR from './namespaces/plateCalculator/tr.json';
 import plateCalculatorSW from './namespaces/plateCalculator/sw.json';
 import plateCalculatorIT from './namespaces/plateCalculator/it.json';
 import plateCalculatorFA from './namespaces/plateCalculator/fa.json';
+import plateCalculatorPL from './namespaces/plateCalculator/pl.json';
 
 const resources = {
   en: {
@@ -1083,13 +1084,64 @@ const resources = {
       }
     },
     plateCalculator: plateCalculatorFA.plateCalculator
+  },
+  pl: {
+    translation: {
+      site: {
+        title: "Kalkulator Maksymalnego Powtórzenia",
+        tagline: "Oblicz Swoje Maksymalne Powtórzenie",
+        description: "Użyj naszego zaawansowanego kalkulatora, aby określić swój maksymalny potencjał w różnych ćwiczeniach.",
+        quote: "Jedyną osobą, którą masz się stać, jest osoba, którą postanawiasz być.",
+        quoteAuthor: "Ralph Waldo Emerson"
+      },
+      exercises: {
+        deadlift: "Martwy Ciąg",
+        bench: "Wyciskanie Leżąc",
+        squat: "Przysiad",
+        descriptions: {
+          deadlift: "Oblicz swój maksymalny martwy ciąg",
+          bench: "Oblicz swoje maksymalne wyciskanie leżąc",
+          squat: "Oblicz swój maksymalny przysiad"
+        }
+      },
+      calculator: {
+        title: "Kalkulator 1RM {{exercise}}",
+        weight: "Ciężar",
+        reps: "Powtórzenia",
+        results: "Wyniki",
+        calculate: "Oblicz"
+      },
+      units: {
+        kg: "kg",
+        lbs: "lb"
+      },
+      seo: {
+        home: {
+          title: "Kalkulator Maksymalnego Powtórzenia | Oblicz Swój Maksymalny Potencjał",
+          description: "Darmowy kalkulator maksymalnego powtórzenia dla martwego ciągu, wyciskania leżąc i przysiadu. Uzyskaj dokładne oszacowania używając sprawdzonych formuł."
+        },
+        deadlift: {
+          title: "Kalkulator 1RM Martwego Ciągu | Oblicz Swój Maksymalny Martwy Ciąg",
+          description: "Oblicz swój maksymalny martwy ciąg używając sprawdzonych formuł. Uzyskaj dokładne oszacowania swojego maksymalnego potencjału."
+        },
+        bench: {
+          title: "Kalkulator 1RM Wyciskania | Oblicz Swoje Maksymalne Wyciskanie",
+          description: "Oblicz swoje maksymalne wyciskanie używając sprawdzonych formuł. Uzyskaj dokładne oszacowania swojego maksymalnego potencjału."
+        },
+        squat: {
+          title: "Kalkulator 1RM Przysiadu | Oblicz Swój Maksymalny Przysiad",
+          description: "Oblicz swój maksymalny przysiad używając sprawdzonych formuł. Uzyskaj dokładne oszacowania swojego maksymalnego potencjału."
+        }
+      }
+    },
+    plateCalculator: plateCalculatorPL.plateCalculator
   }
 };
 
 // Get initial language from URL if we're in the browser
 const getInitialLanguage = () => {
   if (typeof window !== 'undefined') {
-    const match = window.location.pathname.match(/^\/(en|zh|es|fr|de|ja|pa|jv|ko|vi|tr|sw|it|fa|ar|bn|pt|ru|ur|hi|ta)/);
+    const match = window.location.pathname.match(/^\/(en|zh|es|fr|de|ja|pa|jv|ko|vi|tr|sw|it|fa|ar|bn|pt|ru|ur|hi|ta|pl)/);
     return match ? match[1] : 'en';
   }
   return 'en';

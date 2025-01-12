@@ -16,7 +16,14 @@ const { title, lang = 'en', page = 'home' } = Astro.props;
 const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}(-[a-z]{2})?/, '') || '/';
 
 // All supported languages
-const languages = ['en', 'zh', 'es', 'fr', 'ar', 'bn', 'pt', 'ru', 'ur', 'hi', 'ta'];
+const languages = [
+  'en', 'zh', 'es', 'fr', 
+  'de', 'ja', 'pa', 'jv', 
+  'ko', 'vi', 'tr', 'sw', 
+  'it', 'fa', 'ar', 'bn', 
+  'pt', 'ru', 'ur', 'hi', 
+  'ta', 'pl'
+];
 
 // Base URL from your config
 const baseUrl = 'https://onerepmaxcalculator.com';

@@ -23,7 +23,8 @@ const languages = [
   { code: 'ru', name: '🇷🇺 Русский' },
   { code: 'ur', name: '🇵🇰 اردو' },
   { code: 'hi', name: '🇮🇳 हिंदी' },
-  { code: 'ta', name: '🇱🇰 தமிழ்' }
+  { code: 'ta', name: '🇱🇰 தமிழ்' },
+  { code: 'pl', name: '🇵🇱 Polski' }
 ];
 
 export const LanguageSelector = () => {
@@ -34,7 +35,7 @@ export const LanguageSelector = () => {
 
   const handleLanguageChange = (code: string) => {
     const currentPath = window.location.pathname;
-    const pathWithoutLang = currentPath.replace(/^\/(en|zh|es|fr|de|ja|pa|jv|ko|vi|tr|sw|it|fa|ar|bn|pt|ru|ur|hi|ta)/, '');
+    const pathWithoutLang = currentPath.replace(/^\/(en|zh|es|fr|de|ja|pa|jv|ko|vi|tr|sw|it|fa|ar|bn|pt|ru|ur|hi|ta|pl)/, '');
     const newPath = `/${code}${pathWithoutLang || '/'}`;
     window.location.href = newPath;
   };

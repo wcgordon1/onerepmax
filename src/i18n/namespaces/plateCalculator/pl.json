@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Kalkulator Obciążenia",
+    "description": "Oblicz talerze potrzebne do załadowania sztangi dla żądanej wagi całkowitej",
+    "inputs": {
+      "targetWeight": "Waga Docelowa",
+      "barWeight": "Waga Sztangi",
+      "include55": "Uwzględnij talerze 55 lb"
+    },
+    "display": {
+      "barbellSetup": "Układ Sztangi",
+      "platesPerSide": "Talerze na Stronę",
+      "totalWeight": "Waga Całkowita: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Oblicz"
+    },
+    "errors": {
+      "tooLight": "Waga musi być cięższa niż sztanga",
+      "impossibleWeight": "Nie można uzyskać dokładnej wagi z dostępnymi talerzami",
+      "invalidInput": "Proszę wprowadzić prawidłową wagę",
+      "closestWeight": "Najbliższa możliwa waga: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 
