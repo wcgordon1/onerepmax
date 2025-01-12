@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Calculadora de Carga de Anilhas",
+    "description": "Calcule as anilhas necessárias para carregar sua barra com o peso total desejado",
+    "inputs": {
+      "targetWeight": "Peso Alvo",
+      "barWeight": "Peso da Barra",
+      "include55": "Incluir anilhas de 55 lb no cálculo"
+    },
+    "display": {
+      "barbellSetup": "Configuração da Barra",
+      "platesPerSide": "Anilhas por Lado",
+      "totalWeight": "Peso Total: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Calcular"
+    },
+    "errors": {
+      "tooLight": "O peso deve ser maior que o da barra",
+      "impossibleWeight": "Não é possível atingir o peso exato com as anilhas disponíveis",
+      "invalidInput": "Por favor, insira pesos válidos",
+      "closestWeight": "Peso mais próximo possível: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

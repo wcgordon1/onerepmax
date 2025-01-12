@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "प्लेट लोडिंग कैलकुलेटर",
+    "description": "अपने इच्छित वजन के लिए बारबेल पर लगने वाली प्लेट्स की गणना करें",
+    "inputs": {
+      "targetWeight": "लक्षित वजन",
+      "barWeight": "बार का वजन",
+      "include55": "55 पाउंड प्लेट्स शामिल करें"
+    },
+    "display": {
+      "barbellSetup": "बारबेल सेटअप",
+      "platesPerSide": "प्रति साइड प्लेट्स",
+      "totalWeight": "कुल वजन: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "गणना करें"
+    },
+    "errors": {
+      "tooLight": "वजन बार से अधिक होना चाहिए",
+      "impossibleWeight": "उपलब्ध प्लेट्स से सटीक वजन प्राप्त नहीं किया जा सकता",
+      "invalidInput": "कृपया मान्य वजन दर्ज करें",
+      "closestWeight": "निकटतम संभव वजन: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "किग्रा",
+      "lbs": "पाउंड"
+    }
+  }
+} 

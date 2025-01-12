@@ -1,5 +1,16 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import plateCalculatorEN from './namespaces/plateCalculator/en.json';
+import plateCalculatorZH from './namespaces/plateCalculator/zh.json';
+import plateCalculatorES from './namespaces/plateCalculator/es.json';
+import plateCalculatorFR from './namespaces/plateCalculator/fr.json';
+import plateCalculatorAR from './namespaces/plateCalculator/ar.json';
+import plateCalculatorBN from './namespaces/plateCalculator/bn.json';
+import plateCalculatorPT from './namespaces/plateCalculator/pt.json';
+import plateCalculatorRU from './namespaces/plateCalculator/ru.json';
+import plateCalculatorUR from './namespaces/plateCalculator/ur.json';
+import plateCalculatorHI from './namespaces/plateCalculator/hi.json';
+import plateCalculatorTA from './namespaces/plateCalculator/ta.json';
 
 const resources = {
   en: {
@@ -58,7 +69,8 @@ const resources = {
           description: "Calculate your squat one rep max using proven formulas. Get accurate estimates of your maximum squat potential."
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorEN.plateCalculator
   },
   zh: {
     translation: {
@@ -108,7 +120,8 @@ const resources = {
           description: "使用已证实的公式计算深蹲一次最大重量。获得准确的最大深蹲潜力估计。"
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorZH.plateCalculator
   },
   es: {
     translation: {
@@ -158,7 +171,8 @@ const resources = {
           description: "Calcula tu sentadilla máxima usando formulas probadas. Get accurate estimates of your maximum squat potential."
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorES.plateCalculator
   },
   hi: {
     translation: {
@@ -208,7 +222,8 @@ const resources = {
           description: "अपना स्क्वाट वन रेप मैक्स कैलकुलेट करें। सटीक अनुमान प्राप्त करें।"
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorHI.plateCalculator
   },
   ta: {
     translation: {
@@ -240,7 +255,8 @@ const resources = {
         kg: "கிலோ",
         lbs: "பவுண்டு"
       }
-    }
+    },
+    plateCalculator: plateCalculatorTA.plateCalculator
   },
   fr: {
     translation: {
@@ -290,7 +306,8 @@ const resources = {
           description: "Calculez votre maximum au squat avec des formules éprouvées. Obtenez des estimations précises de votre potentiel."
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorFR.plateCalculator
   },
   ar: {
     translation: {
@@ -340,7 +357,8 @@ const resources = {
           description: "احسب الحد الأقصى للقرفصاء باستخدام صيغ مثبتة. احصل على تقديرات دقيقة لقدرتك القصوى."
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorAR.plateCalculator
   },
   bn: {
     translation: {
@@ -390,7 +408,8 @@ const resources = {
           description: "প্রমাণিত সূত্র ব্যবহার করে আপনার স্কোয়াট ওয়ান রেপ ম্যাক্স গণনা করুন। আপনার সর্বোচ্চ ক্ষমতার সঠিক অনুমান পান।"
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorBN.plateCalculator
   },
   pt: {
     translation: {
@@ -440,7 +459,8 @@ const resources = {
           description: "Calcule seu máximo no agachamento usando fórmulas comprovadas. Obtenha estimativas precisas do seu potencial máximo."
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorPT.plateCalculator
   },
   ru: {
     translation: {
@@ -490,7 +510,8 @@ const resources = {
           description: "Рассчитайте свой максимальный вес в приседаниях используя проверенные формулы. Получите точные оценки вашего потенциала."
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorRU.plateCalculator
   },
   ur: {
     translation: {
@@ -540,7 +561,8 @@ const resources = {
           description: "ثابت شدہ فارمولوں کا استعمال کرتے ہوئے اپنا اسکواٹ ون ریپ میکس حساب کریں۔ اپنی زیادہ سے زیادہ صلاحیت کا درست تخمینہ حاصل کریں۔"
         }
       }
-    }
+    },
+    plateCalculator: plateCalculatorUR.plateCalculator
   }
 };
 
@@ -562,7 +584,9 @@ i18next
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
-    }
+    },
+    ns: ['translation', 'plateCalculator'],
+    defaultNS: 'translation'
   }).then(() => {
     console.log('i18next initialized with:', {
       currentLang: i18next.language,

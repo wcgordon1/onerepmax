@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "প্লেট লোডিং ক্যালকুলেটর",
+    "description": "আপনার কাঙ্ক্ষিত ওজনের জন্য বারবেলে কী পরিমাণ প্লেট লাগবে তা গণনা করুন",
+    "inputs": {
+      "targetWeight": "লক্ষ্য ওজন",
+      "barWeight": "বারের ওজন",
+      "include55": "৫৫ পাউন্ড প্লেট অন্তর্ভুক্ত করুন"
+    },
+    "display": {
+      "barbellSetup": "বারবেল সেটআপ",
+      "platesPerSide": "প্রতি পাশে প্লেট",
+      "totalWeight": "মোট ওজন: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "গণনা করুন"
+    },
+    "errors": {
+      "tooLight": "ওজন অবশ্যই বারের চেয়ে বেশি হতে হবে",
+      "impossibleWeight": "উপলব্ধ প্লেট দিয়ে সঠিক ওজন করা সম্ভব নয়",
+      "invalidInput": "অনুগ্রহ করে বৈধ ওজন লিখুন",
+      "closestWeight": "সম্ভাব্য নিকটতম ওজন: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "কেজি",
+      "lbs": "পাউন্ড"
+    }
+  }
+} 

@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Calculateur de Chargement de Poids",
+    "description": "Calculez les poids à charger sur votre barre pour atteindre le poids total souhaité",
+    "inputs": {
+      "targetWeight": "Poids Cible",
+      "barWeight": "Poids de la Barre",
+      "include55": "Inclure les poids de 55 lb dans le calcul"
+    },
+    "display": {
+      "barbellSetup": "Configuration de la Barre",
+      "platesPerSide": "Poids par Côté",
+      "totalWeight": "Poids Total: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Calculer"
+    },
+    "errors": {
+      "tooLight": "Le poids doit être plus lourd que la barre",
+      "impossibleWeight": "Impossible d'atteindre le poids exact avec les poids disponibles",
+      "invalidInput": "Veuillez entrer des poids valides",
+      "closestWeight": "Poids le plus proche possible: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Plate } from '../types/plates';
 
 interface PlateVisualizationProps {
@@ -7,18 +8,20 @@ interface PlateVisualizationProps {
 }
 
 export const PlateVisualization = ({ plates, unit }: PlateVisualizationProps) => {
+  const { t } = useTranslation('plateCalculator');
+  
   const getTextColor = (backgroundColor: string) => {
     return ['#FFFF00', '#FFFFFF'].includes(backgroundColor) ? 'black' : 'white';
   };
 
   return (
     <div className="mt-6">
-      <h3 className="text-lg font-semibold mb-4">Barbell Setup:</h3>
+      <h3 className="text-lg font-semibold mb-4">{t('display.barbellSetup')}</h3>
       <div className="relative w-full min-h-[160px] flex items-center justify-center">
         {/* Barbell */}
         <div className="absolute w-[90%] h-3 bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 rounded-full" />
         
-        {/* Sleeves (the parts where plates go) */}
+        {/* Sleeves */}
         <div className="absolute w-full flex justify-between px-4">
           <div className="w-8 h-8 rounded-full bg-gradient-to-r from-gray-400 to-gray-600" />
           <div className="w-8 h-8 rounded-full bg-gradient-to-l from-gray-400 to-gray-600" />
@@ -31,12 +34,12 @@ export const PlateVisualization = ({ plates, unit }: PlateVisualizationProps) =>
             {plates.map((plate, index) => (
               <div
                 key={`left-${plate.weight}-${index}`}
-                className="flex items-center justify-center rounded-sm transform -translate-x-1 mx-[2px]"
+                className="flex items-center justify-center rounded-lg transform -translate-x-1 mx-[2px]"
                 style={{
                   backgroundColor: plate.color,
                   width: `${Math.max(20, plate.diameter/3)}px`,
                   height: `${Math.max(80, plate.diameter)}px`,
-                  border: '1px solid rgba(255,255,255,0.2)',
+                  border: '1px solid rgba(255,255,255,0.5)',
                   boxShadow: '2px 0 4px rgba(0,0,0,0.2)',
                   transition: 'all 0.2s ease-in-out',
                 }}
@@ -56,12 +59,12 @@ export const PlateVisualization = ({ plates, unit }: PlateVisualizationProps) =>
             {plates.map((plate, index) => (
               <div
                 key={`right-${plate.weight}-${index}`}
-                className="flex items-center justify-center rounded-sm transform translate-x-1 mx-[2px]"
+                className="flex items-center justify-center rounded-lg transform translate-x-1 mx-[2px]"
                 style={{
                   backgroundColor: plate.color,
                   width: `${Math.max(20, plate.diameter/3)}px`,
                   height: `${Math.max(80, plate.diameter)}px`,
-                  border: '1px solid rgba(255,255,255,0.2)',
+                  border: '1px solid rgba(255,255,255,0.5)',
                   boxShadow: '-2px 0 4px rgba(0,0,0,0.2)',
                   transition: 'all 0.2s ease-in-out',
                 }}
@@ -78,9 +81,11 @@ export const PlateVisualization = ({ plates, unit }: PlateVisualizationProps) =>
         </div>
       </div>
 
-      {/* Weight total display */}
-      <div className="text-center mt-6 text-gray-400">
-        Total Weight: {plates.reduce((sum, plate) => sum + plate.weight, 0) * 2 + (unit === 'lbs' ? 45 : 20)}{unit}
+      <div className="text-center mt-4 text-gray-400">
+        {t('display.totalWeight', { 
+          weight: plates.reduce((sum, plate) => sum + plate.weight, 0) * 2 + (unit === 'lbs' ? 45 : 20),
+          unit: t('units.' + unit)
+        })}
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "حاسبة تحميل الأوزان",
+    "description": "احسب الأوزان التي تحتاج لتحميلها على البار للوصول إلى الوزن المطلوب",
+    "inputs": {
+      "targetWeight": "الوزن المستهدف",
+      "barWeight": "وزن البار",
+      "include55": "تضمين أوزان 55 رطل في الحساب"
+    },
+    "display": {
+      "barbellSetup": "إعداد البار",
+      "platesPerSide": "الأوزان لكل جانب",
+      "totalWeight": "الوزن الإجمالي: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "احسب"
+    },
+    "errors": {
+      "tooLight": "يجب أن يكون الوزن أثقل من البار",
+      "impossibleWeight": "لا يمكن تحقيق الوزن المطلوب بالضبط بالأوزان المتوفرة",
+      "invalidInput": "الرجاء إدخال أوزان صحيحة",
+      "closestWeight": "أقرب وزن ممكن: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "كجم",
+      "lbs": "رطل"
+    }
+  }
+} 

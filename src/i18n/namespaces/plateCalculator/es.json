@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Calculadora de Carga de Discos",
+    "description": "Calcula los discos que necesitas cargar en tu barra para el peso total deseado",
+    "inputs": {
+      "targetWeight": "Peso Objetivo",
+      "barWeight": "Peso de la Barra",
+      "include55": "Incluir discos de 55 lb en el cálculo"
+    },
+    "display": {
+      "barbellSetup": "Configuración de la Barra",
+      "platesPerSide": "Discos por Lado",
+      "totalWeight": "Peso Total: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Calcular"
+    },
+    "errors": {
+      "tooLight": "El peso debe ser más pesado que la barra",
+      "impossibleWeight": "No se puede lograr el peso exacto con los discos disponibles",
+      "invalidInput": "Por favor ingrese pesos válidos",
+      "closestWeight": "Peso más cercano posible: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lb"
+    }
+  }
+} 

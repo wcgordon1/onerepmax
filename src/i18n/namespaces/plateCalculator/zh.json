@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "杠铃片计算器",
+    "description": "计算达到目标重量所需的杠铃片配置",
+    "inputs": {
+      "targetWeight": "目标重量",
+      "barWeight": "杠铃重量",
+      "include55": "包含55磅重的杠铃片"
+    },
+    "display": {
+      "barbellSetup": "杠铃配置",
+      "platesPerSide": "每侧杠铃片",
+      "totalWeight": "总重量：{{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "计算"
+    },
+    "errors": {
+      "tooLight": "重量必须大于杠铃重量",
+      "impossibleWeight": "无法使用现有杠铃片达到精确重量",
+      "invalidInput": "请输入有效重量",
+      "closestWeight": "最接近的可能重量：{{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "公斤",
+      "lbs": "磅"
+    }
+  }
+} 

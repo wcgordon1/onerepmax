@@ -22,27 +22,23 @@ export const PlateCalculator = () => {
   const [calculatedPlates, setCalculatedPlates] = useState<Plate[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [actualWeight, setActualWeight] = useState<string | null>(null);
-  const { t } = useTranslation();
+  const { t } = useTranslation('plateCalculator');
 
   const calculatePlatesNeeded = (
     targetWeight: number,
     barW: number,
     unit: 'lbs' | 'kg'
   ): CalculationResult => {
-    console.log('Calculating plates with:', { targetWeight, barW, unit, include55s });
-
     if (targetWeight < barW) {
       return {
         success: false,
         plates: [],
-        error: t('calculator.errors.errorWeightTooLight'),
+        error: t('errors.errorWeightTooLight'),
         remainingWeight: 0
       };
     }
 
     const weightPerSide = (targetWeight - barW) / 2;
-    console.log('Weight per side:', weightPerSide);
-
     const availablePlates = unit === 'lbs' 
       ? (include55s ? PLATES_LB : PLATES_LB.filter(w => w !== 55))
       : PLATES_KG;
@@ -53,7 +49,6 @@ export const PlateCalculator = () => {
     for (const plateWeight of availablePlates) {
       if (remainingWeight >= plateWeight) {
         const count = Math.floor(remainingWeight / plateWeight);
-        // Add the plate 'count' times
         for (let i = 0; i < count; i++) {
           platesNeeded.push({
             weight: plateWeight,
@@ -65,14 +60,15 @@ export const PlateCalculator = () => {
       }
     }
 
-    console.log('Final plates:', platesNeeded, 'Remaining weight:', remainingWeight);
-
     return {
       success: remainingWeight === 0,
       plates: platesNeeded,
       remainingWeight,
       error: remainingWeight === 0 ? undefined : 
-        `Closest possible weight: ${(targetWeight - (remainingWeight * 2)).toFixed(1)}${unit}`
+        t('errors.closestWeight', {
+          weight: (targetWeight - (remainingWeight * 2)).toFixed(1),
+          unit: t('units.' + unit)
+        })
     };
   };
 
@@ -108,12 +104,8 @@ export const PlateCalculator = () => {
   };
 
   const handleCalculate = () => {
-    console.log('Calculate button clicked', { targetWeight, barWeight, unit });
-
     if (targetWeight > 0 && barWeight > 0) {
       const result = calculatePlatesNeeded(targetWeight, barWeight, unit);
-      console.log('Calculation result:', result);
-
       if (result.success) {
         setCalculatedPlates(result.plates);
         setError(null);
@@ -124,19 +116,9 @@ export const PlateCalculator = () => {
         setActualWeight(result.error);
       }
     } else {
-      console.log('Invalid input values');
       setError('Please enter valid weights');
     }
   };
-
-  // Add useEffect to monitor state changes
-  React.useEffect(() => {
-    console.log('State updated:', {
-      calculatedPlates,
-      error,
-      actualWeight
-    });
-  }, [calculatedPlates, error, actualWeight]);
 
   // Handle unit change
   const handleUnitChange = (newUnit: 'lbs' | 'kg') => {
@@ -150,17 +132,17 @@ export const PlateCalculator = () => {
   return (
     <div className="max-w-2xl mx-auto bg-dark-lighter p-6 rounded-lg shadow-xl">
       <h2 className="text-2xl font-bold mb-2 text-center">
-        {t('calculator.plateCalculator')}
+        {t('title')}
       </h2>
       <p className="text-gray-400 mb-6 text-center">
-        {t('calculator.plateCalculatorDesc')}
+        {t('description')}
       </p>
 
       <div className="space-y-6">
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-2">
-              {t('calculator.targetWeight')} ({t(`units.${unit}`)})
+              {t('inputs.targetWeight')} ({t('units.' + unit)})
             </label>
             <div className="flex gap-4">
               <input
@@ -192,14 +174,14 @@ export const PlateCalculator = () => {
                 className="w-4 h-4 text-primary bg-dark border-gray-700 rounded focus:ring-primary focus:ring-2"
               />
               <label htmlFor="include55s" className="text-sm text-gray-300">
-                Include 55 lb plates in calculation
+                {t('inputs.include55')}
               </label>
             </div>
           )}
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              {t('calculator.barWeight')} ({t(`units.${unit}`)})
+              {t('inputs.barWeight')} ({t('units.' + unit)})
             </label>
             <input
               type="number"
@@ -217,7 +199,7 @@ export const PlateCalculator = () => {
           onClick={handleCalculate}
           className="w-full bg-primary hover:bg-primary/80 text-white font-bold py-2 px-4 rounded transition-colors"
         >
-          {t('calculator.calculate')}
+          {t('actions.calculate')}
         </button>
 
         {error ? (
@@ -235,19 +217,6 @@ export const PlateCalculator = () => {
             )}
           </>
         )}
-      </div>
-
-      {/* Add debug output */}
-      <div className="mt-4 p-4 bg-gray-800 rounded text-xs">
-        <pre>
-          Debug Info:
-          Target Weight: {targetWeight}
-          Bar Weight: {barWeight}
-          Unit: {unit}
-          Calculated Plates: {JSON.stringify(calculatedPlates, null, 2)}
-          Error: {error}
-          Actual Weight: {actualWeight}
-        </pre>
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "پلیٹ لوڈنگ کیلکولیٹر",
+    "description": "اپنے مطلوبہ وزن کے لیے بار پر لگنے والی پلیٹوں کا حساب لگائیں",
+    "inputs": {
+      "targetWeight": "مطلوبہ وزن",
+      "barWeight": "بار کا وزن",
+      "include55": "55 پاؤنڈ کی پلیٹیں شامل کریں"
+    },
+    "display": {
+      "barbellSetup": "بار کی ترتیب",
+      "platesPerSide": "ہر طرف پلیٹیں",
+      "totalWeight": "کل وزن: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "حساب کریں"
+    },
+    "errors": {
+      "tooLight": "وزن بار سے زیادہ ہونا چاہیے",
+      "impossibleWeight": "دستیاب پلیٹوں سے مطلوبہ وزن حاصل نہیں کیا جا سکتا",
+      "invalidInput": "براہ کرم درست وزن درج کریں",
+      "closestWeight": "قریب ترین ممکنہ وزن: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "کلو",
+      "lbs": "پاؤنڈ"
+    }
+  }
+} 

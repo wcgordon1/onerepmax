@@ -1,0 +1,29 @@
+{
+  "plateCalculator": {
+    "title": "Plate Loading Calculator",
+    "description": "Calculate the plates you need to load on your barbell for the desired total weight",
+    "inputs": {
+      "targetWeight": "Target Weight",
+      "barWeight": "Bar Weight",
+      "include55": "Include 55 lb plates in calculation"
+    },
+    "display": {
+      "barbellSetup": "Barbell Setup",
+      "platesPerSide": "Plates Per Side",
+      "totalWeight": "Total Weight: {{weight}}{{unit}}"
+    },
+    "actions": {
+      "calculate": "Calculate"
+    },
+    "errors": {
+      "tooLight": "Weight must be heavier than the bar",
+      "impossibleWeight": "Cannot make exact weight with available plates",
+      "invalidInput": "Please enter valid weights",
+      "closestWeight": "Closest possible weight: {{weight}}{{unit}}"
+    },
+    "units": {
+      "kg": "kg",
+      "lbs": "lbs"
+    }
+  }
+} 
