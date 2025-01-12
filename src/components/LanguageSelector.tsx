@@ -3,17 +3,17 @@ import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
 
 const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'zh', name: '中文' },
-  { code: 'es', name: 'Español' },
-  { code: 'fr', name: 'Français' },
-  { code: 'ar', name: 'العربية' },
-  { code: 'bn', name: 'বাংলা' },
-  { code: 'pt', name: 'Português' },
-  { code: 'ru', name: 'Русский' },
-  { code: 'ur', name: 'اردو' },
-  { code: 'hi', name: 'हिंदी' },
-  { code: 'ta', name: 'தமிழ்' }
+  { code: 'en', name: '🇺🇸 English' },
+  { code: 'zh', name: '🇨🇳 中文' },
+  { code: 'es', name: '🇪🇸 Español' },
+  { code: 'fr', name: '🇫🇷 Français' },
+  { code: 'ar', name: '🇸🇦 العربية' },
+  { code: 'bn', name: '🇧🇩 বাংলা' },
+  { code: 'pt', name: '🇧🇷 Português' },
+  { code: 'ru', name: '🇷🇺 Русский' },
+  { code: 'ur', name: '🇵🇰 اردو' },
+  { code: 'hi', name: '🇮🇳 हिंदी' },
+  { code: 'ta', name: '🇱🇰 தமிழ்' }
 ];
 
 export const LanguageSelector = () => {
