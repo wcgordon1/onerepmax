@@ -23,10 +23,18 @@ const resources = {
       },
       calculator: {
         title: "{{exercise}} 1RM Calculator",
-        weight: "Weight",
+        targetWeight: "Target Weight",
         reps: "Repetitions",
         results: "Results",
-        calculate: "Calculate"
+        calculate: "Calculate",
+        plateCalculator: "Plate Loading Calculator",
+        plateCalculatorDesc: "Calculate the plates you need to load on your barbell for the desired total weight",
+        platesPerSide: "Plates Per Side",
+        errors: {
+          errorWeightTooLight: "Weight must be heavier than the bar",
+          errorImpossibleWeight: "Cannot make exact weight with available plates"
+        },
+        barWeight: "Bar Weight"
       },
       units: {
         kg: "kg",

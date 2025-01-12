@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { PlateCalculator } from '../../components/PlateCalculator';
+import { I18nextProvider } from '../../components/I18nextProvider';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'ar' } },
+    { params: { lang: 'bn' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'ur' } },
+    { params: { lang: 'hi' } },
+    { params: { lang: 'ta' } }
+  ];
+}
+
+const { lang } = Astro.params;
+---
+
+<Layout title="Plate Loading Calculator" lang={lang} page="home">
+  <div class="max-w-4xl mx-auto text-center">
+    <I18nextProvider client:load>
+      <PlateCalculator client:load />
+    </I18nextProvider>
+  </div>
+</Layout> 
