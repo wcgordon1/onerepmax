@@ -1,0 +1,125 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { I18nextProvider } from '../../../components/I18nextProvider';
+import { TranslatedText } from '../../../components/TranslatedText';
+import { getBlogPosts } from '../../../utils/blog';
+import type { BlogPost } from '../../../types/blog';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'pa' } },
+    { params: { lang: 'jv' } },
+    { params: { lang: 'ko' } },
+    { params: { lang: 'vi' } },
+    { params: { lang: 'tr' } },
+    { params: { lang: 'sw' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'fa' } },
+    { params: { lang: 'ar' } },
+    { params: { lang: 'bn' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'ur' } },
+    { params: { lang: 'hi' } },
+    { params: { lang: 'ta' } },
+    { params: { lang: 'pl' } }
+  ];
+}
+
+const { lang } = Astro.params;
+const posts = await getBlogPosts(lang as string) || [];
+const allTags = [...new Set(posts.flatMap(post => post.meta.tags || []))];
+---
+
+<Layout 
+  title="Blog" 
+  lang={lang} 
+  page="home"
+  description="Fitness blog posts and articles"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <I18nextProvider client:load>
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          <TranslatedText client:load i18nKey="blog.title" />
+        </h1>
+        <p class="text-xl text-gray-400">
+          <TranslatedText client:load i18nKey="blog.description" />
+        </p>
+      </div>
+
+      <!-- Tags Filter -->
+      <div class="flex flex-wrap gap-2 mb-8 justify-center">
+        {allTags.map(tag => (
+          <button
+            class="px-4 py-2 rounded-full bg-dark-lighter hover:bg-primary/20 transition-colors text-sm"
+            data-tag={tag}
+          >
+            #{tag}
+          </button>
+        ))}
+      </div>
+
+      <!-- Blog Posts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post: BlogPost) => (
+          <article class="bg-dark-lighter rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-200">
+            <a href={`/${lang}/blog/${post.meta.slug}`}>
+              <img 
+                src={post.meta.coverImage} 
+                alt={post.meta.title}
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  {(post.meta.tags || []).map(tag => (
+                    <span class="text-xs text-primary">#{tag}</span>
+                  ))}
+                </div>
+                <h2 class="text-xl font-bold mb-2">{post.meta.title}</h2>
+                <p class="text-gray-400 text-sm mb-4">{post.meta.excerpt}</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">{post.meta.date}</span>
+                  <span class="text-primary hover:text-primary/80">
+                    <TranslatedText client:load i18nKey="blog.readMore" />
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </I18nextProvider>
+  </div>
+</Layout>
+
+<script>
+  // Handle tag filtering
+  const articles = document.querySelectorAll('article');
+  const tagButtons = document.querySelectorAll('[data-tag]');
+
+  tagButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tag = button.getAttribute('data-tag');
+      
+      articles.forEach(article => {
+        const tags = Array.from(article.querySelectorAll('.text-primary')).map(t => t.textContent?.replace('#', ''));
+        if (tag && !tags.includes(tag)) {
+          article.classList.add('hidden');
+        } else {
+          article.classList.remove('hidden');
+        }
+      });
+
+      // Toggle active state
+      tagButtons.forEach(btn => btn.classList.remove('bg-primary/20'));
+      button.classList.add('bg-primary/20');
+    });
+  });
+</script> 

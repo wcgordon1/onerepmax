@@ -1,0 +1,176 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { I18nextProvider } from '../../../components/I18nextProvider';
+import { TranslatedText } from '../../../components/TranslatedText';
+import { MarkdownContent } from '../../../components/MarkdownContent';
+import { getBlogPost, getBlogPosts } from '../../../utils/blog';
+import type { BlogPost } from '../../../types/blog';
+
+export async function getStaticPaths() {
+  const languages = [
+    'en', 'zh', 'es', 'fr', 'de', 'ja', 'pa', 'jv', 
+    'ko', 'vi', 'tr', 'sw', 'it', 'fa', 'ar', 'bn', 
+    'pt', 'ru', 'ur', 'hi', 'ta', 'pl'
+  ];
+
+  // Get all blog posts for English to get all possible slugs
+  const posts = await getBlogPosts('en');
+  
+  // Create paths for each language/post combination
+  return languages.flatMap(lang => 
+    posts.map(post => ({
+      params: { 
+        lang, 
+        // The slug comes from the folder name
+        slug: post.meta.slug 
+      }
+    }))
+  );
+}
+
+const { lang, slug } = Astro.params;
+const post = await getBlogPost(lang as string, slug as string);
+---
+
+<Layout 
+  title={post.meta.seoTitle} 
+  lang={lang} 
+  page="home"
+  description={post.meta.seoDescription}
+>
+  <article class="max-w-4xl mx-auto px-4 py-8">
+    <I18nextProvider client:load>
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          {post.meta.title}
+        </h1>
+        <p class="text-xl text-gray-400 mb-6">
+          {post.meta.excerpt}
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center">
+          {(post.meta.tags || []).map(tag => (
+            <span class="px-3 py-1 bg-dark-lighter rounded-full text-sm">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      </header>
+
+      <MarkdownContent 
+        content={post.content} 
+        client:load 
+      />
+
+      {post.meta.relatedPosts.length > 0 && (
+        <footer class="mt-12 pt-8 border-t border-gray-800">
+          <h2 class="text-2xl font-bold mb-4">
+            <TranslatedText client:load i18nKey="blog.relatedPosts" />
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {post.meta.relatedPosts.map(relatedSlug => (
+              <a 
+                href={`/${lang}/blog/${relatedSlug}`}
+                class="p-4 bg-dark-lighter rounded-lg hover:bg-dark-lighter/80 transition-colors"
+              >
+                <h3 class="font-bold mb-2">
+                  <TranslatedText 
+                    client:load 
+                    i18nKey={`blog.posts.${relatedSlug}.title`} 
+                  />
+                </h3>
+                <p class="text-sm text-gray-400">
+                  <TranslatedText 
+                    client:load 
+                    i18nKey={`blog.posts.${relatedSlug}.excerpt`} 
+                  />
+                </p>
+              </a>
+            ))}
+          </div>
+        </footer>
+      )}
+    </I18nextProvider>
+  </article>
+</Layout>
+
+<style>
+  /* Base text size and color */
+  :global(.prose) {
+    @apply text-gray-300 text-lg leading-relaxed;
+  }
+
+  /* Headings hierarchy */
+  :global(.prose h1) {
+    @apply text-4xl md:text-5xl font-bold text-white mb-8 mt-12;
+  }
+
+  :global(.prose h2) {
+    @apply text-3xl md:text-4xl font-bold text-white mt-12 mb-6 border-b border-gray-800 pb-2;
+  }
+
+  :global(.prose h3) {
+    @apply text-2xl md:text-3xl font-bold text-white mt-8 mb-4;
+  }
+
+  :global(.prose h4) {
+    @apply text-xl md:text-2xl font-bold text-white mt-6 mb-4;
+  }
+
+  /* Lists */
+  :global(.prose ul),
+  :global(.prose ol) {
+    @apply my-6 ml-6;
+  }
+
+  :global(.prose li) {
+    @apply mb-2;
+  }
+
+  /* Links */
+  :global(.prose a) {
+    @apply text-primary hover:text-primary/80 hover:underline transition-all;
+  }
+
+  /* Blockquotes */
+  :global(.prose blockquote) {
+    @apply border-l-4 border-primary pl-4 italic text-gray-400 my-6;
+  }
+
+  /* Code blocks */
+  :global(.prose code) {
+    @apply text-primary bg-dark-lighter px-1.5 py-0.5 rounded text-sm;
+  }
+
+  /* Paragraphs */
+  :global(.prose p) {
+    @apply mb-6;
+  }
+
+  /* Strong/Bold */
+  :global(.prose strong) {
+    @apply text-white font-bold;
+  }
+
+  /* Emphasis/Italic */
+  :global(.prose em) {
+    @apply italic text-gray-300;
+  }
+
+  /* Tables */
+  :global(.prose table) {
+    @apply w-full my-8 border-collapse;
+  }
+
+  :global(.prose th) {
+    @apply bg-dark-lighter text-white p-3 text-left border border-gray-700;
+  }
+
+  :global(.prose td) {
+    @apply p-3 border border-gray-700;
+  }
+
+  /* Horizontal rule */
+  :global(.prose hr) {
+    @apply my-12 border-gray-800;
+  }
+</style> 

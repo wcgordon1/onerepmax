@@ -1,0 +1,26 @@
+{
+  "en": [
+    {
+      "slug": "how-to-increase-your-bench-press",
+      "title": "5 Proven Ways to Increase Your Bench Press",
+      "excerpt": "Learn the most effective techniques to boost your bench press numbers...",
+      "content": "Full content here...",
+      "date": "2024-03-20",
+      "tags": ["bench-press", "strength", "technique"],
+      "coverImage": "/images/blog/bench-press.jpg",
+      "author": "John Doe"
+    }
+  ],
+  "pl": [
+    {
+      "slug": "jak-zwiekszyc-wyciskanie-lezac",
+      "title": "5 Sprawdzonych Sposobów na Zwiększenie Wyciskania Leżąc",
+      "excerpt": "Poznaj najskuteczniejsze techniki zwiększania wyników w wyciskaniu...",
+      "content": "Pełna treść tutaj...",
+      "date": "2024-03-20",
+      "tags": ["wyciskanie", "sila", "technika"],
+      "coverImage": "/images/blog/bench-press.jpg",
+      "author": "John Doe"
+    }
+  ]
+} 
