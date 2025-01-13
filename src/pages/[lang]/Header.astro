@@ -46,10 +46,10 @@ const currentPath = Astro.url.pathname;
 
       <!-- Desktop navigation -->
       <div class="hidden md:flex items-center gap-6">
-        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors">Guides</a>
         <I18nextProvider client:only="react">
           <CalculatorSelector client:only="react" currentPath={currentPath} />
         </I18nextProvider>
+        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors">Blog</a>
         <I18nextProvider client:only="react">
           <LanguageSelector client:only="react" />
         </I18nextProvider>
@@ -62,10 +62,10 @@ const currentPath = Astro.url.pathname;
       class="hidden md:hidden mt-4 bg-dark-lighter rounded-lg shadow-lg"
     >
       <div class="flex flex-col space-y-3 p-4">
-        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors">Guides</a>
         <I18nextProvider client:only="react">
           <CalculatorSelector client:only="react" currentPath={currentPath} />
         </I18nextProvider>
+        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors">Blog</a>
         <div class="pt-2">
           <I18nextProvider client:only="react">
             <LanguageSelector client:only="react" />
@@ -102,4 +102,4 @@ const currentPath = Astro.url.pathname;
       mobileMenu.classList.add('hidden');
     }
   });
-</script>
+</script> 
