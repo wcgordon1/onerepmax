@@ -1,0 +1,1 @@
+npm run generate-blog "How to Increase Endurance" && npm run generate-blog "How to Build Muscle" && npm run generate-blog "How to Lose Weight" && npm run generate-blog "Best Natural Fat Burners" && npm run generate-blog "5 Best Dumbbell Chest Exercises"
