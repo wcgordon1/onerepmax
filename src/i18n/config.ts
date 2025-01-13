@@ -33,6 +33,11 @@ const resources = {
         quote: "The only person you are destined to become is the person you decide to be.",
         quoteAuthor: "Ralph Waldo Emerson"
       },
+      blog: {
+        title: "One Rep Max Calculator Blog",
+        description: "Read our tips and guides on how to improve your strength, stamina, and overall fitness levels.",
+        readMore: "Read More"
+      },
       exercises: {
         deadlift: "Deadlift",
         bench: "Bench Press",
@@ -92,6 +97,11 @@ const resources = {
         quote: "你注定会成为的那个人，就是你决定要成为的那个人。",
         quoteAuthor: "拉尔夫·沃尔多·爱默生"
       },
+      blog: {
+        title: "一次性最大重量计算器博客",
+        description: "阅读我们的提示和指南，了解如何提高您的力量、耐力和整体健康水平。",
+        readMore: "阅读更多"
+      },
       exercises: {
         deadlift: "硬拉",
         bench: "卧推",
@@ -142,6 +152,11 @@ const resources = {
         description: "Utiliza nuestra calculadora avanzada para determinar tu potencial máximo de levantamiento en diferentes ejercicios.",
         quote: "La única persona en la que estás destinado a convertirte es la persona que decides ser.",
         quoteAuthor: "Ralph Waldo Emerson"
+      },
+      blog: {
+        title: "Blog de Calculadora de Una Repetición Máxima",
+        description: "Lee nuestros consejos y guías sobre cómo mejorar tu fuerza, resistencia y niveles generales de fitness.",
+        readMore: "Leer Más"
       },
       exercises: {
         deadlift: "Peso Muerto",
@@ -194,6 +209,11 @@ const resources = {
         quote: "आप जो व्यक्ति बनने के लिए नियत हैं वह वही व्यक्ति है जो आप बनने का निर्णय लेते हैं।",
         quoteAuthor: "राल्फ वाल्डो एमर्सन"
       },
+      blog: {
+        title: "One Rep Max Calculator Blog",
+        description: "Read our tips and guides on how to improve your strength, stamina, and overall fitness levels.",
+        readMore: "Read More"
+      },
       exercises: {
         deadlift: "डेडलिफ्ट",
         bench: "बेंच प्रेस",
@@ -245,6 +265,11 @@ const resources = {
         quote: "நீங்கள் யாராக மாற விதிக்கப்பட்டுள்ளீர்களோ அந்த நபராக மாறுவதற்கு நீங்கள் முடிவெடுக்கிறீர்கள்.",
         quoteAuthor: "ரால்ப் வால்டோ எமர்சன்"
       },
+      blog: {
+        title: "One Rep Max Calculator Blog",
+        description: "Read our tips and guides on how to improve your strength, stamina, and overall fitness levels.",
+        readMore: "Read More"
+      },
       exercises: {
         deadlift: "டெட்லிப்ட்",
         bench: "பெஞ்ச் பிரஸ்",
@@ -277,6 +302,11 @@ const resources = {
         description: "Utilisez notre calculateur avancé pour déterminer votre potentiel maximum de levage pour différents exercices.",
         quote: "La seule personne que vous êtes destiné à devenir est celle que vous décidez d'être.",
         quoteAuthor: "Ralph Waldo Emerson"
+      },
+      blog: {
+        title: "Calculateur de Maximum Blog",
+        description: "Lisez nos conseils et guides sur comment améliorer votre force, votre résistance et vos niveaux de forme physique générale.",
+        readMore: "Lire Plus"
       },
       exercises: {
         deadlift: "Soulevé de Terre",
@@ -329,6 +359,11 @@ const resources = {
         quote: "الشخص الوحيد الذي من المقدر أن تصبحه هو الشخص الذي تقرر أن تكونه.",
         quoteAuthor: "رالف والدو إيمرسون"
       },
+      blog: {
+        title: "حاسبة الحد الأقصى لتكرار واحد Blog",
+        description: "اقرأ مقالاتنا عن كيفية تحسين قدرتك القوية ومقاومتك المستمرة ومستويات اللياقة العامة.",
+        readMore: "قراءة المزيد"
+      },
       exercises: {
         deadlift: "الرفعة الميتة",
         bench: "بنش بريس",
@@ -379,6 +414,11 @@ const resources = {
         description: "বিভিন্ন ব্যায়ামে আপনার সর্বোচ্চ ওজন তোলার ক্ষমতা নির্ধারণ করতে আমাদের উন্নত ক্যালকুলেটর ব্যবহার করুন।",
         quote: "আপনি যে ব্যক্তি হতে চান, সেই ব্যক্তি হওয়াই আপনার নিয়তি।",
         quoteAuthor: "র‍্যাল্ফ ওয়াল্ডো এমারসন"
+      },
+      blog: {
+        title: "ওয়ান রেপ ম্যাক্স ক্যালকুলেটর Blog",
+        description: "আপনার সর্বোচ্চ ওজন তোলার ক্ষমতা নির্ধারণ করতে আমাদের উন্নত ক্যালকুলেটর ব্যবহার করুন। আপনার সর্বোচ্চ ক্ষমতা গণনা করুন।",
+        readMore: "পড়া আরো"
       },
       exercises: {
         deadlift: "ডেডলিফট",
@@ -431,6 +471,11 @@ const resources = {
         quote: "A única pessoa que você está destinado a se tornar é a pessoa que você decide ser.",
         quoteAuthor: "Ralph Waldo Emerson"
       },
+      blog: {
+        title: "Calculadora de Repetição Máxima Blog",
+        description: "Leia nossos conselhos e guias sobre como melhorar sua força, resistência e níveis gerais de forma física.",
+        readMore: "Leia Mais"
+      },
       exercises: {
         deadlift: "Levantamento Terra",
         bench: "Supino",
@@ -481,6 +526,11 @@ const resources = {
         description: "Используйте наш продвинутый калькулятор для определения вашего максимального потенциала в различных упражнениях.",
         quote: "Единственный человек, которым вам суждено стать - это человек, которым вы решите быть.",
         quoteAuthor: "Ральф Уолдо Эмерсон"
+      },
+      blog: {
+        title: "Калькулятор Максимального Веса Blog",
+        description: "Читайте наши советы и руководства о том, как улучшить вашу силу, выносливость и общий уровень физической формы.",
+        readMore: "Читать больше"
       },
       exercises: {
         deadlift: "Становая Тяга",
@@ -533,6 +583,11 @@ const resources = {
         quote: "آپ جو شخص بننے کے لیے مقدر ہیں وہ وہی شخص ہے جو آپ بننے کا فیصلہ کرتے ہیں۔",
         quoteAuthor: "رالف والڈو ایمرسن"
       },
+      blog: {
+        title: "ون ریپ میکس کیلکولیٹر Blog",
+        description: "اپنی زیادہ سے زیادہ صلاحیت کا حساب کریں۔ متعدد ثابت شدہ فارمولوں کا استعمال کرتے ہوئے درست تخمینہ حاصل کریں۔",
+        readMore: "مزید پڑھیں"
+      },
       exercises: {
         deadlift: "ڈیڈ لفٹ",
         bench: "بینچ پریس",
@@ -583,6 +638,11 @@ const resources = {
         description: "Nutze unseren fortgeschrittenen Rechner, um dein maximales Hebepotential bei verschiedenen Übungen zu bestimmen.",
         quote: "Die einzige Person, zu der du bestimmt bist zu werden, ist die Person, die du entscheidest zu sein.",
         quoteAuthor: "Ralph Waldo Emerson"
+      },
+      blog: {
+        title: "One Rep Max Rechner Blog",
+        description: "Lies unsere Tipps und Anleitungen, wie du deine Stärke, Ausdauer und dein allgemeines Fitnessniveau verbessern kannst.",
+        readMore: "Mehr lesen"
       },
       exercises: {
         deadlift: "Kreuzheben",
@@ -635,6 +695,11 @@ const resources = {
         quote: "あなたがなるべき人は、あなたがなろうと決めた人です。",
         quoteAuthor: "ラルフ・ワルド・エマーソン"
       },
+      blog: {
+        title: "1RMカウンター Blog",
+        description: "異なるトレーニングでの最大重量挙上力を判断するために、高度な計算機を使用します。",
+        readMore: "もっと読む"
+      },
       exercises: {
         deadlift: "デッドリフト",
         bench: "ベンチプレス",
@@ -685,6 +750,11 @@ const resources = {
         description: "ਵਿਵਿਨ ਵਿਯਾਮਾਂ ਵਿਚ ਤੁਹਾਰ ਸਰਬਾਂ ਵਾਂ ਤੋਲਾ ਕਰਨ ਲਈ ਮਾਮ ਦੇਰ ਉੰਨਤ ਕੈਲਕੁਲੇਟਰ ਵਪਣ ਕਰੋ।",
         quote: "ਤੁਹਾਰ ਨਿਯਤਿ ਜੋ ਤੁਹਾਰ ਨਿਯਤਿ ਹੋਵਾ ਜੋ ਤੁਹਾਰ ਨਿਯਤਿ ਲਈ ਤੁਹਾਰ ਨਿਯਤਿ ਲੈ ਤਾਂ ਤੁਹਾਰ ਨਿਯਤਿ ਹੋਵਾ।",
         quoteAuthor: "ਰਾਲਫ ਵਾਲਡੋ ਏਮਰਸਨ"
+      },
+      blog: {
+        title: "ਪੱਤਰ ਮਾਕਸ ਕੈਲਕੁਲੇਟਰ Blog",
+        description: "ਤੁਹਾਰ ਸਰਬਾਂ ਵਾਂ ਤੋਲਾ ਕਰਨ ਲਈ ਮਾਮ ਦੇਰ ਉੰਨਤ ਕੈਲਕੁਲੇਟਰ ਵਪਣ ਕਰੋ। ਤੁਹਾਰ ਸਰਬਾਂ ਕਰਨ ਕਰੋ।",
+        readMore: "ਹੋਰ ਪੜ੍ਤਾ ਪੜ੍ਤਾ"
       },
       exercises: {
         deadlift: "ਡੈਡਲਿਫਟ",
@@ -737,6 +807,11 @@ const resources = {
         quote: "Orang yang Anda dikaitkan untuk menjadi adalah orang yang Anda inginkan untuk menjadi.",
         quoteAuthor: "Ralph Waldo Emerson"
       },
+      blog: {
+        title: "Kalkulator 1RM Blog",
+        description: "Baca tips dan panduan kami tentang cara meningkatkan kekuatan, ketahanan, dan tingkat kebugaran umum Anda.",
+        readMore: "Baca Lebih Lanjut"
+      },
       exercises: {
         deadlift: "Deadlift",
         bench: "Bench Press",
@@ -787,6 +862,11 @@ const resources = {
         description: "다른 운동에서 최대 중량을 결정하기 위해 고급 계산기를 사용하세요.",
         quote: "너가 되어야 할 사람은 너가 되기로 결정한 사람입니다.",
         quoteAuthor: "랄프 왈도 에머슨"
+      },
+      blog: {
+        title: "1RM 계산기 Blog",
+        description: "다른 운동에서 최대 중량을 결정하기 위해 고급 계산기를 사용하세요. 최대 중량을 계산하세요.",
+        readMore: "더 읽기"
       },
       exercises: {
         deadlift: "데드리프트",
@@ -839,6 +919,11 @@ const resources = {
         quote: "Người mà bạn được kết nối để trở thành là người mà bạn quyết định trở thành.",
         quoteAuthor: "Ralph Waldo Emerson"
       },
+      blog: {
+        title: "Bàn Tập 1RM Blog",
+        description: "Đọc bài viết của chúng tôi về cách tăng cường sức mạnh của bạn trong các bài tập khác nhau.",
+        readMore: "Đọc Thêm"
+      },
       exercises: {
         deadlift: "Deadlift",
         bench: "Bench Press",
@@ -889,6 +974,11 @@ const resources = {
         description: "Farklı egzersizlerde maksimum ağırlık kaldırma kapasitesini belirlemek için gelişmiş hesap makinesini kullanın.",
         quote: "Senin olmanı gereken kişi, senin olmağını istediğin kişi.",
         quoteAuthor: "Ralph Waldo Emerson"
+      },
+      blog: {
+        title: "1RM Hesaplama Blog",
+        description: "Farklı egzersizlerde maksimum ağırlık kaldırma kapasitesini belirlemek için gelişmiş hesap makinesini kullanın. Maksimum ağırlık için doğru tahminler elde edin.",
+        readMore: "Daha Fazla Oku"
       },
       exercises: {
         deadlift: "Deadlift",
@@ -941,6 +1031,11 @@ const resources = {
         quote: "Mtu ambao unapaswa kuwa ni mtu ambao unapaswa kuwa.",
         quoteAuthor: "Ralph Waldo Emerson"
       },
+      blog: {
+        title: "Kalkulator 1RM Blog",
+        description: "Tumia kalkulator yenyejuzi kwa kupata potensiali maksima kwa kila mazingira. Kutoa matokeo zimeongezeka kutumia mifumo mengi ya formulas zimeongezeka.",
+        readMore: "Tumia Matokeo zaidi"
+      },
       exercises: {
         deadlift: "Deadlift",
         bench: "Bench Press",
@@ -991,6 +1086,11 @@ const resources = {
         description: "Utilizza il nostro calcolatore avanzato per determinare la tua potenziale massima di sollevamento in diversi esercizi.",
         quote: "La persona a cui sei destinato a diventare è la persona che decidi di essere.",
         quoteAuthor: "Ralph Waldo Emerson"
+      },
+      blog: {
+        title: "Calcolatore 1RM Blog",
+        description: "Leggi i nostri consigli e guide su come migliorare la tua forza, la tua resistenza e i tuoi livelli generali di fitness.",
+        readMore: "Leggi di più"
       },
       exercises: {
         deadlift: "Deadlift",
@@ -1043,6 +1143,11 @@ const resources = {
         quote: "شخصی که باید باشید، شخصی است که تصمیم می‌دهید باشید.",
         quoteAuthor: "رالف والدو إیمرسون"
       },
+      blog: {
+        title: "ماشین حساب 1RM Blog",
+        description: "برای تعیین ظرفیت بیشینه بارگیری در تمرین‌های مختلف از ماشین حساب پیشرفته استفاده کنید. ظرفیت بیشینه بارگیری با استفاده از چند فرمول اثبات شده را بدست آورید.",
+        readMore: "مزید بخوانید"
+      },
       exercises: {
         deadlift: "Deadlift",
         bench: "Bench Press",
@@ -1093,6 +1198,11 @@ const resources = {
         description: "Użyj naszego zaawansowanego kalkulatora, aby określić swój maksymalny potencjał w różnych ćwiczeniach.",
         quote: "Jedyną osobą, którą masz się stać, jest osoba, którą postanawiasz być.",
         quoteAuthor: "Ralph Waldo Emerson"
+      },
+      blog: {
+        title: "Kalkulator Maksymalnego Powtórzenia Blog",
+        description: "Użyj naszego zaawansowanego kalkulatora, aby określić swój maksymalny potencjał w różnych ćwiczeniach. Uzyskaj dokładne oszacowania używając sprawdzonych formuł.",
+        readMore: "Czytaj Więcej"
       },
       exercises: {
         deadlift: "Martwy Ciąg",

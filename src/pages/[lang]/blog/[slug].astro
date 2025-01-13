@@ -56,6 +56,15 @@ const post = await getBlogPost(lang as string, slug as string);
         </div>
       </header>
 
+      <div class="w-full aspect-[16/9] mb-8 rounded-lg overflow-hidden">
+        <img 
+          src={post.meta.coverImage} 
+          alt={post.meta.title}
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+
       <MarkdownContent 
         content={post.content} 
         client:load 
