@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { Calculator } from '../../components/Calculator';
 import { I18nextProvider } from '../../components/I18nextProvider';
+import { LiftTitle } from '../../components/LiftTitle';
 
 export async function getStaticPaths() {
   return [
@@ -34,7 +35,17 @@ const { lang } = Astro.params;
 ---
 
 <Layout title="Deadlift Calculator" lang={lang} page="deadlift">
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-4xl mx-auto text-center">
+    <img 
+      src="/deadlift.png" 
+      alt="Deadlift" 
+      width="60"
+      height="60"
+      class="mx-auto mb-2 object-contain" 
+    />
+    <I18nextProvider client:load>
+      <LiftTitle client:load exercise="deadlift" />
+    </I18nextProvider>
     <I18nextProvider client:only="react">
       <Calculator client:only="react" exercise="deadlift" />
     </I18nextProvider>

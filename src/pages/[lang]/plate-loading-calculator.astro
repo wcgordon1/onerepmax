@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { PlateCalculator } from '../../components/PlateCalculator';
 import { I18nextProvider } from '../../components/I18nextProvider';
+import { Title } from '../../components/Title';
 
 export async function getStaticPaths() {
   return [
@@ -34,6 +35,16 @@ const { lang } = Astro.params;
 ---
 
 <Layout title="Plate Loading Calculator" lang={lang} page="home">
+  <img 
+    src="/plates.png" 
+    alt="Plate Calculator" 
+    width="60"
+    height="60"
+    class="mx-auto mb-2 object-contain" 
+  />
+  <I18nextProvider client:load>
+    <Title client:load />
+  </I18nextProvider>
   <div class="max-w-4xl mx-auto text-center">
     <I18nextProvider client:load>
       <PlateCalculator client:load />

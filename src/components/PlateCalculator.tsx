@@ -131,9 +131,9 @@ export const PlateCalculator = () => {
 
   return (
     <div className="max-w-2xl mx-auto bg-dark-lighter p-6 rounded-lg shadow-xl">
-      <h1 className="text-2xl font-bold mb-2 text-center">
+      <h2 className="text-2xl font-bold mb-2 text-center">
         {t('title')}
-      </h1>
+      </h2>
       <p className="text-gray-400 mb-6 text-center">
         {t('description')}
       </p>

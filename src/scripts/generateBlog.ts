@@ -254,4 +254,4 @@ if (!topic) {
   process.exit(1);
 }
 
-generateBlogPost(topic); 
+generateBlogPost(topic);
