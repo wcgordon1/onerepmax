@@ -2,9 +2,9 @@
 import { LanguageSelector } from './LanguageSelector';
 import { CalculatorSelector } from './CalculatorSelector';
 import { I18nextProvider } from './I18nextProvider';
-import { getLanguageFromURL } from '../utils';
+import { getCurrentLang } from '../../utils';
 
-const currentLang = getLanguageFromURL(Astro.url.pathname) || 'en';
+const currentLang = getCurrentLang(Astro.url.pathname) || 'en';
 const currentPath = Astro.url.pathname;
 ---
 
