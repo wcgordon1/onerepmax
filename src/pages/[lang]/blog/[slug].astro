@@ -5,6 +5,9 @@ import { TranslatedText } from '../../../components/TranslatedText';
 import { MarkdownContent } from '../../../components/MarkdownContent';
 import { getBlogPost, getBlogPosts } from '../../../utils/blog';
 import type { BlogPost } from '../../../types/blog';
+import { CalculatorLinks } from '../../../components/CalculatorLinks';
+import { useTranslation } from 'react-i18next';
+import { RelatedBlogs } from '../../../components/RelatedBlogs';
 
 export async function getStaticPaths() {
   const languages = [
@@ -30,6 +33,26 @@ export async function getStaticPaths() {
 
 const { lang, slug } = Astro.params;
 const post = await getBlogPost(lang as string, slug as string);
+const allPosts = await getBlogPosts(lang as string);
+
+// Find the index of the current post
+const currentIndex = allPosts.findIndex(p => p.meta.slug === slug);
+
+// Get 3 posts around the current post (mix of before and after)
+const relatedPosts = allPosts
+  .filter((_, index) => {
+    // If we're near the start, get the next 3 posts
+    if (currentIndex < 2) {
+      return index > 0 && index <= 3;
+    }
+    // If we're near the end, get the previous 3 posts
+    if (currentIndex > allPosts.length - 3) {
+      return index >= allPosts.length - 4 && index < allPosts.length && index !== currentIndex;
+    }
+    // Otherwise get 1 post before and 2 posts after
+    return (index === currentIndex - 1) || (index === currentIndex + 1) || (index === currentIndex + 2);
+  })
+  .slice(0, 3);
 ---
 
 <Layout 
@@ -65,39 +88,24 @@ const post = await getBlogPost(lang as string, slug as string);
         />
       </div>
 
-      <MarkdownContent 
-        content={post.content} 
-        client:load 
-      />
+      <div class="prose prose-invert max-w-none mb-12">
+        <MarkdownContent 
+          content={post.content} 
+          client:load 
+        />
+      </div>
 
-      {post.meta.relatedPosts.length > 0 && (
-        <footer class="mt-12 pt-8 border-t border-gray-800">
-          <h2 class="text-2xl font-bold mb-4">
-            <TranslatedText client:load i18nKey="blog.relatedPosts" />
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {post.meta.relatedPosts.map(relatedSlug => (
-              <a 
-                href={`/${lang}/blog/${relatedSlug}`}
-                class="p-4 bg-dark-lighter rounded-lg hover:bg-dark-lighter/80 transition-colors"
-              >
-                <h3 class="font-bold mb-2">
-                  <TranslatedText 
-                    client:load 
-                    i18nKey={`blog.posts.${relatedSlug}.title`} 
-                  />
-                </h3>
-                <p class="text-sm text-gray-400">
-                  <TranslatedText 
-                    client:load 
-                    i18nKey={`blog.posts.${relatedSlug}.excerpt`} 
-                  />
-                </p>
-              </a>
-            ))}
-          </div>
-        </footer>
-      )}
+      <div data-testid="related-blogs-wrapper">
+        <RelatedBlogs 
+          client:only="react"
+          currentSlug={post.meta.slug}
+          relatedPosts={relatedPosts}
+        />
+      </div>
+
+      <div class="mt-12">
+        <CalculatorLinks client:load />
+      </div>
     </I18nextProvider>
   </article>
 </Layout>

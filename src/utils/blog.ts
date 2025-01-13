@@ -54,15 +54,38 @@ export async function getBlogPost(lang: string, slug: string): Promise<BlogPost>
   }
 }
 
-export async function getBlogPosts(lang: string): Promise<BlogPost[]> {
+export async function getBlogPosts(lang: string, limit?: number): Promise<BlogPost[]> {
   const postsDir = join(process.cwd(), 'src/data/blog/posts');
   
   try {
+    // Read directory and get meta files first
     const postFolders = await readdir(postsDir);
     console.log('Found post folders:', postFolders);
     
+    // Get meta info for all posts to sort by date
+    const metaPromises = postFolders.map(async folder => {
+      try {
+        const metaPath = join(postsDir, folder, 'meta.json');
+        const metaContent = await readFile(metaPath, 'utf-8');
+        return { folder, meta: JSON.parse(metaContent) };
+      } catch (error) {
+        console.error(`Failed to read meta for folder ${folder}:`, error);
+        return null;
+      }
+    });
+
+    const metaResults = await Promise.all(metaPromises);
+    
+    // Sort by date and take only the needed posts
+    const sortedFolders = metaResults
+      .filter((result): result is { folder: string; meta: any } => result !== null)
+      .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime())
+      .slice(0, limit)
+      .map(result => result.folder);
+
+    // Now load only the needed posts
     const posts = await Promise.all(
-      postFolders.map(async folder => {
+      sortedFolders.map(async folder => {
         try {
           return await getBlogPost(lang, folder);
         } catch (error) {
@@ -72,9 +95,8 @@ export async function getBlogPosts(lang: string): Promise<BlogPost[]> {
       })
     );
     
-    // Filter out any null posts and sort by date
-    const validPosts = posts.filter((post): post is BlogPost => post !== null)
-      .sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
+    // Filter out any null posts
+    const validPosts = posts.filter((post): post is BlogPost => post !== null);
     
     console.log(`Loaded ${validPosts.length} posts for language ${lang}`);
     return validPosts;
