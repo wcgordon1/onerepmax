@@ -1,7 +1,7 @@
 ---
-import { LanguageSelector } from './LanguageSelector';
-import { CalculatorSelector } from './CalculatorSelector';
-import { I18nextProvider } from './I18nextProvider';
+import { LanguageSelector } from '../../components/LanguageSelector';
+import { CalculatorSelector } from '../../components/CalculatorSelector';
+import { I18nextProvider } from '../../components/I18nextProvider';
 import { getLanguageFromURL } from '../../utils';
 
 const currentLang = getLanguageFromURL(Astro.url.pathname) || 'en';
