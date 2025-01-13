@@ -62,7 +62,7 @@ const currentPath = Astro.url.pathname;
       class="hidden md:hidden mt-4 bg-dark-lighter rounded-lg shadow-lg"
     >
       <div class="flex flex-col space-y-3 p-4">
-        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors">Guides</a>
+        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors pb-2">Guides</a>
         <I18nextProvider client:only="react">
           <CalculatorSelector client:only="react" currentPath={currentPath} />
         </I18nextProvider>

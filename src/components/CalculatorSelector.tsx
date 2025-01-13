@@ -5,7 +5,7 @@ const calculators = [
   { path: '/bench', name: '🏋️‍♂️ Bench Press 1RM' },
   { path: '/deadlift', name: '💪 Deadlift 1RM' },
   { path: '/squat', name: '🦵 Squat 1RM' },
-  { path: '/barbell-plate-calculator', name: '🎯 Plate Loading Calculator' }
+  { path: '/plate-loading-calculator', name: '🎯 Plate Loading Calculator' }
 ];
 
 interface CalculatorSelectorProps {
