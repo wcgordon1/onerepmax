@@ -45,7 +45,7 @@ const currentLang = getLanguageFromURL(Astro.url.pathname) || 'en';
         <a href={`/${currentLang}/deadlift`} class="text-white hover:text-primary transition-colors">Deadlift</a>
         <a href={`/${currentLang}/bench`} class="text-white hover:text-primary transition-colors">Bench Press</a>
         <a href={`/${currentLang}/squat`} class="text-white hover:text-primary transition-colors">Squat</a>
-        <a href={`/${currentLang}/about`} class="text-white hover:text-primary transition-colors">About</a>
+        <a href={`/${currentLang}/blog`} class="text-white hover:text-primary transition-colors">Blog</a>
         <I18nextProvider client:only="react">
           <LanguageSelector client:only="react" />
         </I18nextProvider>
